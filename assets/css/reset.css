@@ -1,0 +1,37 @@
+/* https://jakelazaroff.com/words/my-modern-css-reset/#user-content-fn-ackshually */
+
+@layer reset {
+  :root {
+    /* https://developer.chrome.com/docs/css-ui/animate-to-height-auto */
+    interpolate-size: allow-keywords;
+    /* https://x.com/jh3yy/status/1885365324674928642 */
+    hyphens: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-inline-size: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    color: currentColor;
+  }
+}

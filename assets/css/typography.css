@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/*  MARK: TYPOGRAPHY
+*/
+
+@layer typography {
+  body {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font-weight: lighter;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+    font-family: calibri, sans-serif;
+  }
+}
+
+/*
+https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/Baseline for default links */
+label:not([class]) {
+  /* Relatively sized thickness and offset */
+  text-decoration-thickness: max(0.08em, 1px);
+  text-underline-offset: 0.15em;
+}
+a:not([class]) {
+  /* Relatively sized thickness and offset */
+  text-decoration-thickness: max(0.08em, 1px);
+  text-underline-offset: 0.15em;
+}
+
+:focus-visible {
+  --outline-size: max(2px, 0.15em);
+
+  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)
+    var(--outline-color, currentColor);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:not([class]) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Cinzel, "Times New Roman", Times, serif;
+    font-weight: 100;
+    margin-block: 0.75em;
+    line-height: 1.25;
+    text-wrap: balance;
+    letter-spacing: 0.05ch;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  p {
+    margin: 1em;
+  }
+
+  hr {
+    margin-block: 1em;
+  }
+
+  ol,
+  ul {
+    margin-block: 1em;
+  }
+
+  ol,
+  ul {
+    padding-inline-start: 1.5em;
+    padding-block-start: 0;
+    list-style: revert;
+  }
+
+  li {
+    margin-block: 0.5em;
+  }
+}
+
+:is(th,td):first-child {
+  text-align: left;
+}
+
+:is(th,td):last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

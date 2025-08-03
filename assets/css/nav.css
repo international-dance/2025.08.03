@@ -1,0 +1,101 @@
+@layer nav;
+
+nav {
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  /* background-color: rgba(17, 24, 39, 0.4); */
+}
+
+nav label {
+  user-select: none;
+  transition: background-color 250ms ease-in-out;
+  border-radius: 0.25rem;
+}
+
+nav label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav label:last-child {
+  display: none;
+}
+
+nav:has(input:nth-of-type(1):checked) ~ main article:nth-of-type(1),
+nav:has(input:nth-of-type(2):checked) ~ main article:nth-of-type(2),
+nav:has(input:nth-of-type(3):checked) ~ main article:nth-of-type(3),
+nav:has(input:nth-of-type(4):checked) ~ main article:nth-of-type(4),
+nav:has(input:nth-of-type(5):checked) ~ main article:nth-of-type(5),
+nav:has(input:nth-of-type(6):checked) ~ main article:nth-of-type(6) {
+  display: grid;
+  opacity: 1;
+}
+
+@media (max-width: 575px) {
+  nav label:not(:last-child) {
+    display: none;
+  }
+  nav label:last-child {
+    display: block;
+  }
+}
+
+app-container:has(#toggleNav:checked) {
+  nav {
+    grid-template-columns: 1fr;
+  }
+
+  label:not(:last-child) {
+    display: block;
+    width: 100%;
+  }
+
+  nav label:last-child {
+    position: absolute;
+    right: 0;
+  }
+}
+
+/* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/
+
+nav[style*="width"]::before {
+  display: none;
+}
+[style*="width"]::before {
+  content: attr(style);
+  color: var(--color-on-background);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  line-height: 0;
+  position: absolute;
+}
+
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  nav {
+    overflow: auto;
+    position: relative;
+    resize: horizontal;
+  }
+
+  nav::after,
+  nav::before {
+    color: var(--color-on-background);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    line-height: 0;
+    position: absolute;
+  }
+
+  nav::after {
+    bottom: 0.75rem;
+    content: "Resize me!";
+    right: 0.85rem;
+  }
+
+  nav::before {
+    content: attr(style);
+    left: 0.85rem;
+    top: 0.85rem;
+  }
+}
+*/

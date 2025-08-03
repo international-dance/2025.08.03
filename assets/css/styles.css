@@ -1,0 +1,61 @@
+.slide-main--heading .from-left {
+  /* width: 500px; */
+  height: 100px;
+  background: url('/assets/images/brand/wordmark.svg') center / contain no-repeat;
+  -webkit-mask: url('/assets/images/brand/wordmark.svg') center / contain no-repeat;
+  mask: url('/assets/images/brand/wordmark.svg') center / contain no-repeat;
+  background-color: rgba(255,255,255,1.0);
+}
+
+.svg-icon {
+  width: 48px;
+  height: 48px;
+  margin: 24px;
+
+  /* for chromium based browsers */
+  -webkit-mask: url('/images/alert-triangle.svg') center / contain no-repeat;
+  mask: url('/images/alert-triangle.svg') center / contain no-repeat;
+  background-color: red;
+}
+
+.svg-icon.gradient {
+  background-image: linear-gradient( 180deg, #FFE985 10%, #FA742B 100%);
+}
+
+.visually-hidden {
+  /* to remove element from document flow */
+  position: absolute;
+
+  /* Element with 0 width/height is not read by
+  screen readers. So, setting it to next minimum
+  size to shrink its dimensions. */
+  width: 1px;
+  height: 1px;
+
+  /* content of the element will still be visible,
+  so, hide this overflow. */
+  overflow: hidden;
+
+  /* when content is wrapped into 1px, screen readers
+  cannot read space between words, so keep white-space
+  as it is. */
+  white-space: nowrap;
+
+  /* still 1px of background-color will be visible.
+  Use clip-path, scale or translate transform to
+  hide it. */
+  clip-path: circle(0);
+  /* or */
+  /* transform: scale(0); */
+  /* or */
+  /* transform: translateX(-9999px); */
+}
+
+
+
+
+
+
+
+
+

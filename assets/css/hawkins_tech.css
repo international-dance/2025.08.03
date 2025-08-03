@@ -1,0 +1,667 @@
+.toggle-light {
+  position: fixed;
+  bottom: calc(1dvh + 1dvw);
+  left: calc(1dvh + 1dvw);
+  font-size: calc(2dvh + 2dvw);
+  cursor: pointer;
+}
+.toggle-light.off {
+  left: -5dvw;
+}
+.toggle-reload {
+  position: fixed;
+  bottom: calc(1dvh + 1dvw);
+  left: calc(1dvh + 1dvw + 2.5dvh + 2.5dvw);
+  font-size: calc(2dvh + 2dvw);
+  cursor: pointer;
+  filter: hue-rotate(260deg);
+}
+.toggle-reload.off {
+  left: -5dvw;
+}
+.dark-mode .toggle-light {
+  filter: grayscale(1);
+}
+.dark-mode .toggle-reload {
+  filter: grayscale(1);
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.not-visible {
+  visibility: hidden;
+  opacity: 0;
+}
+.none {
+  display: none !important;
+}
+.no-opacity {
+  opacity: 0;
+}
+.absolute {
+  position: absolute;
+}
+.absolute.top {
+  top: 2dvh;
+}
+.absolute.right {
+  right: 2dvw;
+}
+.absolute.bottom {
+  bottom: 2dvh;
+}
+.absolute.left {
+  left: 2dvw;
+}
+.absolute.off_left {
+  left: -50dvw;
+}
+.absolute.off_bottom {
+  bottom: -50dvh;
+}
+.loading-window {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  background-color: #111;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.loading-window canvas {
+  z-index: 50;
+}
+.loading-window .welcome {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.loading-window .welcome .text {
+  flex: 1 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.loading-window .welcome .text span {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-size: calc(4dvh + 4dvw);
+  color: #fff;
+}
+.loading-window .welcome .text .title {
+  text-shadow: 2px 2px 0 #000, -2px -2px black, 2px -2px black, -2px 2px 0 #000;
+  filter: drop-shadow(2px 4px 6px #333);
+  padding: 10px;
+}
+.loading-window .welcome .button {
+  flex: 1 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: all 1s;
+}
+.loading-window .welcome .button button {
+  font-family: Ubuntu;
+  font-size: calc(2dvh + 2dvw);
+  color: #fff;
+  text-shadow: 0 0 12px #000;
+  background: rgba(20, 20, 20, 0.75);
+  padding: calc(1.25dvh + 1.25dvw);
+  border-radius: 20px;
+  box-shadow: inset 0 0 2px #c1c1c1;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 3px #333);
+  height: calc(5dvh + 5dvw);
+}
+.loading-window .welcome .button button:hover,
+.loading-window .welcome .button button:focus,
+.loading-window .welcome .button button:active {
+  box-shadow: inset 0 0 5px #c1c1c1;
+  background: #484848;
+}
+.loading-window .welcome .button button:hover span,
+.loading-window .welcome .button button:focus span,
+.loading-window .welcome .button button:active span {
+  opacity: 1 !important;
+}
+.loading-window .step1 {
+  position: absolute;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: normal;
+}
+.loading-window .step1 .left {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: flex-start;
+  order: 0;
+}
+.loading-window .step1 .middle {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
+}
+.loading-window .step1 .middle span {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-size: calc(4dvh + 4dvw);
+  color: #fff;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.loading-window .step1 .middle .title {
+  text-shadow: 2px 2px 0 #000, -2px -2px black, 2px -2px black, -2px 2px 0 #000;
+  filter: drop-shadow(2px 4px 6px black);
+  padding: 10px;
+}
+.loading-window .step1 .right {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: flex-end;
+  order: 0;
+}
+.loading-window .step2 {
+  position: absolute;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+}
+.loading-window .step3 {
+  position: absolute;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+}
+.not-visible .application.terminal {
+  transform: scale(0.1);
+}
+.not-visible .application.output {
+  transform: scale(0.1);
+}
+.application {
+  color: #eee;
+  background: transparent;
+  border: 1px solid #1f1f1f;
+  font-family: "Ubuntu Mono";
+  height: 40dvh;
+  width: 70dvw;
+  transition: all 1s;
+  filter: drop-shadow(2px 4px 6px black);
+}
+@media (max-width: 1000px) {
+  .application {
+    width: calc(100dvw - 4dvw);
+    transform: scale(0.75);
+  }
+}
+.application.terminal {
+  max-width: 700px;
+}
+.application.output {
+  max-width: 550px;
+}
+.application .tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+  background: #1f1f1f;
+}
+.application .tabs .title {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  color: #bdbdbd;
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 23px;
+}
+.application .tabs .title.active {
+  color: #fff;
+  background: #333333;
+  border: 1px solid #333333;
+  border-bottom: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.application .tabs .title:not(.active) {
+  box-shadow: inset 0 0 17px 4px #eeeeee08;
+}
+.application .tabs .title.main {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: initial;
+  color: #eee;
+}
+.application .tabs .title-close {
+  height: 23px;
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  text-align: right;
+  filter: grayscale(1);
+  padding-right: 2px;
+  padding-bottom: 2px;
+  box-shadow: inset 0 0 17px 4px #eeeeee08;
+}
+.application .menu {
+  overflow: hidden;
+  height: 16px;
+  background: #333333;
+}
+.application .menu .item {
+  color: #bbb;
+  padding-right: 5px;
+  border-right: 1px solid #1f1f1f;
+}
+.application .menu .item:nth-child(1) {
+  padding-left: 5px;
+  border-left: 1px solid #1f1f1f;
+}
+.application .contents {
+  padding: 5px;
+  color: #bdbdbd;
+  background: #0c0c0c;
+  opacity: 0.55;
+  height: calc(100% - 39px);
+  overflow: auto;
+}
+.application .contents span {
+  opacity: 1;
+}
+.application .contents::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+.application .contents::-webkit-scrollbar {
+  width: 12px;
+}
+.application .contents::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoC1CzTtw.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgo6eA.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvTtw.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v17/KFOjCneDtsqEr0keqCMhbBc9.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v17/KFO-CneDtsqEr0keqCMhbC-BL-Hy.ttf)
+    format("truetype");
+}
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Ubuntu, Ubuntu Mono;
+  background-color: #fff;
+  color: #212529;
+  font-display: block;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(0 * -1);
+  margin-right: calc(1.5rem * -0.5);
+  margin-left: calc(1.5rem * -0.5);
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(1.5rem * 0.5);
+  padding-left: calc(1.5rem * 0.5);
+  margin-top: 0;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+.layout > .left {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  height: 100dvh;
+  max-height: 100dvh;
+  width: calc(100% - 11dvh);
+  align-items: center;
+  justify-content: center;
+}
+.layout > .right {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  height: 100dvh;
+  width: 11dvh;
+  position: absolute;
+  right: -300px;
+  overflow: hidden;
+  background-color: white;
+  border: 0 solid black;
+  border-left-width: 1px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.layout > .right.transition {
+  transition: all 1s;
+}
+.layout > .right.on {
+  right: 0;
+}
+.layout > .right > .text {
+  width: 100%;
+  text-align: center;
+}
+.layout > .right > .text > svg {
+  width: 100%;
+  height: 95dvh;
+}
+.layout > .right > .text > svg path {
+  fill: #212529;
+}
+section#content {
+  height: 100dvh;
+  width: calc(100% - 11dvh);
+  position: absolute;
+  top: 100dvh;
+  background: white;
+}
+section#content.transition {
+  transition: all 1s;
+}
+section#content.on {
+  top: 0;
+}
+section#content > .menu {
+  height: 25dvh;
+  border: 0 solid black;
+  border-bottom-width: 1px;
+  text-transform: lowercase;
+  font-size: calc(3dvh + 10dvw);
+  line-height: 25dvh;
+  font-family: "Ubuntu Mono";
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-left: -1dvw;
+  margin-right: -1dvw;
+}
+section#content > .menu.selected {
+  height: 70dvh;
+  line-height: 20dvh;
+  font-size: 12dvh;
+  box-shadow: 0 0 4px 4px #0000005e inset;
+  background-color: #eee;
+}
+section#content > .menu.selected div.sub-text {
+  top: 0;
+  font-size: calc(1.5dvh + 1.5dvw);
+  line-height: calc(2.1dvh + 2.1dvw);
+}
+section#content > .menu.who a {
+  font-size: calc(1.7dvh + 1.7dvw);
+  line-height: calc(2.4dvh + 2.4dvw);
+  white-space: nowrap;
+}
+section#content > .menu div.sub-text {
+  overflow: auto;
+  pointer-events: all !important;
+  position: relative;
+  top: 2dvh;
+  font-size: calc(1.5dvh + 1.5dvw);
+  line-height: calc(2.1dvh + 2.1dvw);
+  padding-left: 2dvw;
+  padding-right: 2dvw;
+  font-family: Ubuntu;
+  font-weight: 200;
+  transition: 1s all;
+  max-height: 50dvh;
+  text-transform: initial;
+  cursor: auto;
+  margin-left: 2dvw;
+  margin-right: 2dvw;
+  padding-bottom: 1dvh;
+}
+section#content > .menu div.sub-text::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+section#content > .menu div.sub-text::-webkit-scrollbar {
+  width: 12px;
+}
+section#content > .menu div.sub-text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+section#content > .menu div.sub-text .line {
+  display: grid;
+  margin-bottom: 0.5dvh;
+}
+section#content > .menu div.sub-text .line.w400 {
+  font-weight: 400;
+  filter: drop-shadow(1px 1px #888);
+}
+section#content > .menu div.sub-text .line a {
+  color: #212529;
+  pointer-events: all;
+  font-weight: bold;
+  cursor: pointer;
+  display: contents;
+}
+section#content > .menu div.sub-text .line a:hover,
+section#content > .menu div.sub-text .line a:active,
+section#content > .menu div.sub-text .line a:focus {
+  color: #212529cb;
+}
+section#content > .menu div.sub-text .tag-mosaic {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: baseline;
+  width: 100%;
+  height: 100%;
+  max-height: 44dvh;
+  overflow-x: scroll;
+  padding-bottom: 1dvh;
+}
+section#content > .menu div.sub-text .tag-mosaic::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+section#content > .menu div.sub-text .tag-mosaic::-webkit-scrollbar {
+  width: 12px;
+}
+section#content > .menu div.sub-text .tag-mosaic::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+section#content > .menu div.sub-text .tag {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: fit-content;
+  align-self: center;
+  padding-right: 1dvw;
+}
+section#content > .menu:nth-child(4) {
+  border-bottom-width: 0px;
+}
+section#content > .menu:hover,
+section#content > .menu:focus,
+section#content > .menu:active {
+  background: #eee;
+}
+section#content > .menu.transition {
+  transition: all 1s;
+}
+section#content > .menu.not-selected {
+  height: 10dvh;
+  font-size: 5dvh;
+  line-height: 10dvh;
+}
+section#content > .menu.not-selected span.text {
+  padding: 0;
+}
+section#content > .menu span {
+  pointer-events: none;
+}
+#hash {
+  cursor: pointer;
+}
+.off {
+  display: none;
+}
+.blink {
+  animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+.dark-mode {
+  background-color: #212529;
+}
+.dark-mode .loading {
+  background-color: #212529;
+  color: #eee;
+}
+.dark-mode .layout > .left section#content {
+  background-color: #212529;
+}
+.dark-mode .layout > .left section#content > .menu {
+  background-color: #212529;
+  color: #eee;
+  border-color: #eee;
+}
+.dark-mode .layout > .left section#content > .menu.selected {
+  background-color: #444;
+  box-shadow: 0 0 4px 4px #333 inset;
+}
+.dark-mode .layout > .left section#content > .menu:hover {
+  background-color: #444;
+}
+.dark-mode .layout > .left section#content > .menu div.sub-text .line.w400 {
+  font-weight: 400;
+  filter: drop-shadow(2px 2px #555);
+}
+.dark-mode .layout > .left section#content > .menu div.sub-text .line a {
+  color: #eee;
+  pointer-events: all;
+  font-weight: bold;
+}
+.dark-mode .layout > .left section#content > .menu div.sub-text .line a:hover,
+.dark-mode .layout > .left section#content > .menu div.sub-text .line a:active,
+.dark-mode .layout > .left section#content > .menu div.sub-text .line a:focus {
+  color: #eeeeeecb;
+}
+.dark-mode .layout > .right {
+  background-color: #212529;
+  border-color: #eee;
+}
+.dark-mode .layout > .right svg path {
+  fill: #eee;
+}
