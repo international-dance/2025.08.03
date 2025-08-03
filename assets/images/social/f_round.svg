@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 61.65 66.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(.radial-gradient);
+        mix-blend-mode: multiply;
+        opacity: .8;
+      }
+
+      .cls-1,
+      .cls-2,
+      .cls-3 {
+        stroke-width: 0;
+      }
+
+      .cls-2 {
+        fill: #000000;
+      }
+
+      .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: #FFFFFF;
+      }
+    </style>
+    <radialGradient class="radial-gradient" cx="31.96" cy="37.24" fx="31.96" fy="37.24" r="29.68"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000057" />
+      <stop offset=".39" stop-color="rgba(116,116,164,.54)" stop-opacity=".54" />
+      <stop offset=".79" stop-color="rgba(216,216,229,.15)" stop-opacity=".15" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <g class="cls-4">
+    <g class="Layer_2">
+      <g class="ELEMENTS">
+        <circle class="cls-1" cx="31.96" cy="37.24" r="29.68" />
+        <circle class="cls-2" cx="23.83" cy="23.83" r="23.83" />
+        <path class="cls-3"
+          d="M26.47,39.01v-13.28h4.43l.84-5.49h-5.27v-3.57c0-1.5.74-2.97,3.1-2.97h2.4v-4.68s-2.18-.37-4.25-.37c-4.34,0-7.18,2.63-7.18,7.39v4.19h-4.83v5.49h4.83v13.28h5.94Z" />
+      </g>
+    </g>
+  </g>
+</svg>
