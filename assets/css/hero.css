@@ -43,7 +43,7 @@ https://codepen.io/dragontheory/pen/abeEEmz */
 .hero-content {
   text-align: center;
   color: white;
-  max-width: min(90vw, 60ch);
+  max-width: min(90vw, 80ch);
   padding: clamp(1rem, 5vw, 3rem);
   background: rgba(0, 0, 0, 0.4);
   border-radius: clamp(0.5rem, 2vw, 1rem);

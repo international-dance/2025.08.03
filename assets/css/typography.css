@@ -1,18 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Teko:wght@300..700&display=swap');
 
 /*  MARK: TYPOGRAPHY
 */
 
-@layer typography {
-  body {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-    font-weight: lighter;
-    -moz-osx-font-smoothing: grayscale;
-    word-break: break-word;
-    -webkit-font-smoothing: antialiased;
-    font-family: calibri, sans-serif;
-  }
+/* MARK: TYPOGRAPHY
+*/
+:root {
+  --font-family: 'Oxanium', sans-serif;
+  --font-size: clamp(1rem, 1.3cqi, 1.3rem);
+  --font-weight: normal;
+  --font-style: normal;
+  --font-optical-sizing: auto;
+  --line-height: 1.5;
+  --letter-spacing: 0.05rem;
+  --txt-shadow-color: 0, 0, 0;
+  --txt-shadow-opacity: 0.3;
+  --moz-osx-font-smoothing: grayscale;
+  --word-break: break-word;
+  --webkit-font-smoothing: antialiased;
+
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  font-style: var(--font-style);
+  font-optical-sizing: var(--font-optical-sizing);
+  color: rgba(var(--txt-color), var(--txt-opacity));
+  line-height: var(--line-height);
+  text-shadow: var(--txt-shadow);
+  word-break: var(--word-break);
+  -moz-osx-font-smoothing: var(--moz-osx-font-smoothing);
+  -webkit-font-smoothing: var(--webkit-font-smoothing);
 }
 
 /*
@@ -22,6 +39,7 @@ label:not([class]) {
   text-decoration-thickness: max(0.08em, 1px);
   text-underline-offset: 0.15em;
 }
+
 a:not([class]) {
   /* Relatively sized thickness and offset */
   text-decoration-thickness: max(0.08em, 1px);
@@ -31,12 +49,12 @@ a:not([class]) {
 :focus-visible {
   --outline-size: max(2px, 0.15em);
 
-  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)
-    var(--outline-color, currentColor);
+  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid) var(--outline-color, currentColor);
   outline-offset: var(--outline-offset, var(--outline-size));
 }
 
 :not([class]) {
+
   h1,
   h2,
   h3,
@@ -78,11 +96,11 @@ a:not([class]) {
   }
 }
 
-:is(th,td):first-child {
+:is(th, td):first-child {
   text-align: left;
 }
 
-:is(th,td):last-child {
+:is(th, td):last-child {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
