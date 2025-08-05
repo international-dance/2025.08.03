@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Teko:wght@300..700&display=swap');
 
-/*  MARK: TYPOGRAPHY
-*/
-
 /* MARK: TYPOGRAPHY
 */
 :root {
@@ -13,6 +10,7 @@
   --font-optical-sizing: auto;
   --line-height: 1.5;
   --letter-spacing: 0.05rem;
+  --txt-color: ;
   --txt-shadow-color: 0, 0, 0;
   --txt-shadow-opacity: 0.3;
   --moz-osx-font-smoothing: grayscale;
@@ -24,7 +22,7 @@
   font-weight: var(--font-weight);
   font-style: var(--font-style);
   font-optical-sizing: var(--font-optical-sizing);
-  color: rgba(var(--txt-color), var(--txt-opacity));
+  /* color: rgba(var(--txt-color), var(--txt-opacity)); */
   line-height: var(--line-height);
   text-shadow: var(--txt-shadow);
   word-break: var(--word-break);
@@ -55,45 +53,42 @@ a:not([class]) {
 
 :not([class]) {
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  /* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#container-query-fluid-type */
+  :is(h1, h2, h3, h4, h5) {
     font-family: Cinzel, "Times New Roman", Times, serif;
+    color: rgba(var(--txt-color), 1.0);
+    padding: 1rem;
     font-weight: 100;
-    margin-block: 0.75em;
-    line-height: 1.25;
-    text-wrap: balance;
     letter-spacing: 0.05ch;
-    overflow-wrap: break-word;
+    text-transform: uppercase;
+    text-wrap: balance;
     text-align: center;
+    font-weight: normal;
   }
+}
 
-  p {
-    margin: 1em;
-  }
+p {
+  margin: 1em;
+}
 
-  hr {
-    margin-block: 1em;
-  }
+hr {
+  margin-block: 1em;
+}
 
-  ol,
-  ul {
-    margin-block: 1em;
-  }
+ol,
+ul {
+  margin-block: 1em;
+}
 
-  ol,
-  ul {
-    padding-inline-start: 1.5em;
-    padding-block-start: 0;
-    list-style: revert;
-  }
+ol,
+ul {
+  padding-inline-start: 1.5em;
+  padding-block-start: 0;
+  list-style: revert;
+}
 
-  li {
-    margin-block: 0.5em;
-  }
+li {
+  margin-block: 0.5em;
 }
 
 :is(th, td):first-child {

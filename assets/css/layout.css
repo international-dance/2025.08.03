@@ -75,7 +75,7 @@ article {
 main article:nth-of-type(1) section:nth-of-type(1) {
   height: 100dvh;
   color: rgb(251, 216, 212, 1);
-  background-color: rgb(0, 0, 0, 1);
+  /* background-color: rgb(0, 0, 0, 1); */
 
   display: grid;
   place-items: center;
