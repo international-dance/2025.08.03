@@ -4,7 +4,8 @@
 */
 :root {
   --font-family: 'Oxanium', sans-serif;
-  --font-size: clamp(1rem, 1.3cqi, 1.3rem);
+  /* --font-size: clamp(1rem, 1.3cqi, 1.3rem); */
+  --font-size: 1.2rem;
   --font-weight: normal;
   --font-style: normal;
   --font-optical-sizing: auto;
@@ -14,7 +15,7 @@
   --txt-shadow-color: 0, 0, 0;
   --txt-shadow-opacity: 0.3;
   --moz-osx-font-smoothing: grayscale;
-  --word-break: break-word;
+  /* --word-break: break-word; */
   --webkit-font-smoothing: antialiased;
 
   font-family: var(--font-family);
