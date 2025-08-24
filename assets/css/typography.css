@@ -51,24 +51,25 @@ a:not([class]) {
   outline-offset: var(--outline-offset, var(--outline-size));
 }
 
-:not([class]) {
-
-  /* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#container-query-fluid-type */
-  :is(h1, h2, h3, h4, h5) {
-    font-family: Cinzel, "Times New Roman", Times, serif;
-    color: rgba(var(--txt-color), 1.0);
-    padding: 1rem;
-    font-weight: 100;
-    letter-spacing: 0.05ch;
-    text-transform: uppercase;
-    text-wrap: balance;
-    text-align: center;
-    font-weight: normal;
-  }
+/* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#container-query-fluid-type */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Cinzel, "Times New Roman", Times, serif;
+  color: rgba(var(--txt-color), 1.0);
+  padding: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.05ch;
+  text-transform: uppercase;
+  text-wrap: balance;
+  text-align: center;
+  font-weight: normal;
 }
 
 p {
-  margin: 1em;
+  padding: 2em;
 }
 
 hr {

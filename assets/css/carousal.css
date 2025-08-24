@@ -1,232 +1,223 @@
-.slide-main--heading .from-left {
-  /* width: 500px; */
-  height: 100px;
-  background: url('/assets/images/brand/wordmark.svg') center / contain no-repeat;
-  -webkit-mask: url('/assets/images/brand/wordmark.svg') center / contain no-repeat;
-  mask: url('/assets/images/brand/wordmark.svg') center / contain no-repeat;
-  background-color: rgba(255,255,255,1.0);
+:root {
+  --size-1: .25rem;
+  --size-2: .5rem;
+  --size-3: 1rem;
+  --size-4: 1.25rem;
+  --size-5: 1.5rem;
+  --size-6: 1.75rem;
+  --size-7: 2rem;
+  --size-8: 3rem;
+  --size-9: 4rem;
+  --size-10: 5rem;
+  --size-11: 7.5rem;
+  --size-12: 10rem;
+  --size-13: 15rem;
+  --size-14: 20rem;
+  --size-15: 30rem;
+  --radius-round: 50%;
+      --radius-1: 2px;
+    --radius-2: 5px;
+    --radius-3: 1rem;
+    --radius-4: 2rem;
+    --radius-5: 4rem;
+    --radius-6: 8rem;
+        --surface-4: #868e96;
 }
 
-.svg-icon {
-  width: 48px;
-  height: 48px;
-  margin: 24px;
+.carousel {
+  anchor-name: --carousel;
+  container-type: inline-size;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 
-  /* for chromium based browsers */
-  -webkit-mask: url('/images/alert-triangle.svg') center / contain no-repeat;
-  mask: url('/images/alert-triangle.svg') center / contain no-repeat;
-  background-color: red;
-}
-
-.svg-icon.gradient {
-  background-image: linear-gradient( 180deg, #FFE985 10%, #FA742B 100%);
-}
-
-.visually-hidden {
-  /* to remove element from document flow */
-  position: absolute;
-
-  /* Element with 0 width/height is not read by
-  screen readers. So, setting it to next minimum
-  size to shrink its dimensions. */
-  width: 1px;
-  height: 1px;
-
-  /* content of the element will still be visible,
-  so, hide this overflow. */
-  overflow: hidden;
-
-  /* when content is wrapped into 1px, screen readers
-  cannot read space between words, so keep white-space
-  as it is. */
-  white-space: nowrap;
-
-  /* still 1px of background-color will be visible.
-  Use clip-path, scale or translate transform to
-  hide it. */
-  clip-path: circle(0);
-  /* or */
-  /* transform: scale(0); */
-  /* or */
-  /* transform: translateX(-9999px); */
-}
-
-
-
-
-
-
-
-
-
-/* ============ Full Page Slider ================= */
-.creative-carousal--hero{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-}
-.creative-carousal--hero .carousel-slider {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-.creative-carousal--hero .carousel-slider  .swiper-slide{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0;
-  background-size: cover;
-  background-position: center;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide.swiper-slide-active {
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  z-index: 3;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #222327;
-  opacity: 0.7;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide.swiper-slide-active:after {
-  opacity: 0.4;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide .inner {
-  width: 100%;
-  display: block;
-  text-align: center;
-  color: #fff;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -ms-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide.swiper-slide-active .inner {
-  opacity: 1;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide .inner h2{
-  width: 100%;
-  float: left;
-  font-size: 4vw;
-  line-height: 5vw;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide .inner a{
-  font-size: 19px;
-  color: #fff;
-  font-family: "Fjalla One", sans-serif;
-  padding-bottom: 5px;
-  position: relative;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 4px;
-  text-decoration: none;
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -ms-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-.creative-carousal--hero .carousel-slider .swiper-slide .inner a:hover{
-  text-decoration: none;
-  color: #75dab4;
-}
-.creative-carousal--hero .slide-progress {
-  width: 220px;
-  display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  left: 50%;
-  bottom: 30px;
-  margin-left: -110px;
-  z-index: 3;
-  text-align: center;
-}
-.creative-carousal--hero .slide-progress span {
-  display: inline-block;
-  color: #fff;
-  font-family: "Fjalla One", sans-serif;
-  font-size: 14px;
-}
-.creative-carousal--hero .slide-progress .swiper-pagination {
-  width: 160px;
-  height: 2px;
-  margin: auto 10px;
-  display: inline-block;
-  position: static;
-  background: rgba(255, 255, 255, 0.3);
-}
-.creative-carousal--hero .slide-progress .swiper-pagination .swiper-pagination-progressbar-fill {
-  background: #fff;
-}
-
-.creative-carousal--hero .slide-progress span {
-  display: inline-block;
-  color: #fff;
-  font-family: "Fjalla One", sans-serif;
-  font-size: 14px;
-}
-.creative-carousal--hero .swiper-button-prev {
-  height: auto;
-  position: absolute;
-  left: auto;
-  top: auto;
-  right: 120px;
-  bottom: 30px;
-  font-family: "Fjalla One", sans-serif;
-  color: #fff;
-  background: none;
-}
-.creative-carousal--hero .swiper-button-prev:after{
-  display: none;
-}
-.creative-carousal--hero .swiper-button-next {
-  height: auto;
-  position: absolute;
-  left: auto;
-  top: auto;
-  right: 40px;
-  bottom: 30px;
-  font-family: "Fjalla One", sans-serif;
-  color: #fff;
-  background: none;
-}
-.creative-carousal--hero .swiper-button-next:after{
-  display: none;
-}
-/* ====================== Responsive Ipad =============================== */
-@media (max-width: 991px) {
-  .creative-carousal--hero .carousel-slider .swiper-slide .inner h2{
-             font-size: 7vw;
-      line-height: 7vw;
-      margin-bottom: 15px;
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth
   }
 }
 
-/* ====================== Responsive Iphone =============================== */
-@media screen and (max-width: 767px) {
-  .creative-carousal--hero .carousel-slider .swiper-slide .inner h2{
-      font-size: 12vw;
-      line-height: 12vw;
-      margin-bottom: 15px;
+.carousel__slide {
+  scroll-snap-align: start;
+
+  :where(.carousel--offscreen-inert) & {
+    animation: offscreen-inert linear both;
+    animation-timeline: view(x)
   }
-  .creative-carousal--hero .swiper-button-prev{
-          left: 40px;
+
+  :where(.carousel--unsnapped-inert) & {
+    container-type: scroll-state;
+
+    > * {
+      @container not scroll-state(snapped) {
+        interactivity: inert
+      }
+    }
   }
-  .creative-carousal--hero .swiper-button-next{
-          right: 40px;
+}
+
+.carousel[data-astro-cid-74ozrrro] {
+  & .carousel__slide {
+    &.season-start::scroll-marker {
+      @media (prefers-reduced-motion: no-preference) {
+        transition: text-decoration .8s ease, font-variation-settings .3s ease;
+      }
+    }
+  }
+}
+
+/* .carousel[data-astro-cid-74ozrrro] {
+  & .carousel__slide {
+    &.season-start::scroll-marker {
+      content: "Season " attr(data-season-content);
+      white-space: nowrap;
+      font-size: var(--font-size-3);
+      font-variation-settings: "wght" 300;
+      color: var(--text-2);
+      text-decoration: underline 2px #0000;
+      text-underline-offset: 5px;
+      cursor: pointer;
+    }
+  }
+} */
+
+.carousel[data-astro-cid-74ozrrro] {
+  inline-size: 100cqi;
+  padding-block-start: var(--size-3);
+  padding-inline: 5vmin;
+  scroll-padding-inline: 5vmin;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px;
+  gap: 4vmin;
+  scroll-marker-group: before;
+  margin-block-start: 2lh;
+
+  &::scroll-marker-group {
+    position: absolute;
+    position-anchor: --carousel;
+    inset-inline-start: anchor(left);
+    inset-block-end: anchor(top);
+    margin-inline-start: 5vmin;
+    block-size: 1lh;
+    display: flex;
+    gap: var(--size-7)
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    inline-size: 85cqi
+  }
+
+  .carousel__slide {
+    padding: 0;
+    position: relative;
+    container-type: scroll-state;
+
+    &:nth-child(1 of: has(figure:not(.seen))) {
+      scroll-initial-target: nearest
+    }
+
+    &.season-start::scroll-marker {
+      content: "" attr(data-season-content);
+      white-space: nowrap;
+      font-size: var(--font-size-3);
+      font-variation-settings: "wght" 300;
+      color: var(--text-2);
+      text-decoration: underline 2px #0000;
+      text-underline-offset: 5px;
+      cursor: pointer;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: text-decoration .8s ease, font-variation-settings .3s ease
+      }
+    }
+
+    &.season-start::scroll-marker:is(:hover, :focus-visible, :target-current) {
+      color: var(--text-1)
+    }
+
+    &.season-start::scroll-marker:target-current {
+      text-decoration-color: var(--link);
+      font-variation-settings: "wght" 800
+    }
+
+    &.season-start::scroll-marker:focus-visible {
+      outline-offset: 10px
+    }
+  }
+}
+
+.episode[data-astro-cid-74ozrrro] {
+  display: grid;
+  line-height: 1.25;
+  anchor-name: --episode;
+  anchor-scope: --episode;
+
+  &.seen:after {
+    content: "✓" / "Watched";
+    position: absolute;
+    position-anchor: --episode;
+    top: anchor(top);
+    right: anchor(right);
+    margin: var(--size-3);
+    color: #fff;
+    display: inline-grid;
+    place-items: center;
+    inline-size: var(--size-5);
+    aspect-ratio: 1;
+    border-radius: var(--radius-round);
+    border: 1px solid white
+  }
+
+  &.unreleased {
+    opacity: .25
+  }
+
+  > img {
+    background-color: var(--surface-3);
+    border-radius: var(--radius-2);
+    transition: filter .3s var(--ease-3);
+
+    @container not scroll-state(snapped: inline) {
+      filter: grayscale(1)
+    }
+  }
+
+  > figcaption {
+    >.episode-number {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: var(--font-size-0)
+    }
+
+    >.episode-title {
+      font-size: var(--font-size-3);
+      font-weight: 700;
+      line-height: 1cap;
+      margin-block-start: var(--size-1)
+    }
+
+    >.episode-description {
+      margin-block: var(--size-2);
+      font-weight: 300;
+      font-size: var(--font-size-3)
+    }
+
+    >.episode-meta {
+      display: flex;
+      align-items: baseline;
+      gap: var(--size-2);
+      font-size: var(--font-size-1);
+
+      >.episode-badge {
+        line-height: 1cap;
+        padding: var(--size-1);
+        border-radius: var(--radius-2);
+        border: 1px solid var(--surface-4)
+      }
+    }
   }
 }
