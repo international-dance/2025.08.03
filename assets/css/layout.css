@@ -23,6 +23,7 @@ app-container {
 header {
   display: grid;
   grid-template-columns: 1fr auto;
+  /* background-color: #7B5955; */
 
   app-logo {
     padding-block: 0.5rem;
@@ -93,7 +94,7 @@ main article:nth-of-type(1) section:nth-of-type(1) {
 
 main article:nth-of-type(1) section:nth-of-type(2) {
   color: rgb(251, 216, 212, 1);
-  background-color: rgb(61, 44, 42, .64);
+  background-color: #7B5955;
 
   h2 {
     font-size: 2.5rem;
@@ -144,7 +145,8 @@ main article:nth-of-type(1) section:nth-of-type(2) {
 
 main article:nth-of-type(1) section:nth-of-type(3) {
   display: grid;
-  background-color: #7B5955;
+  background-color: rgb(61, 44, 42, .64);
+  /* background-color: #7B5955; */
 
   >div {
     container-type: inline-size;
@@ -182,6 +184,7 @@ aside {
 footer {
   display: grid;
   grid-template-columns: 1fr auto;
+  background-color: #7B5955;
 
   app-copy {
     padding-block: 0.5rem;

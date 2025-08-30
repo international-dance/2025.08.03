@@ -1,28 +1,37 @@
-ul[data-table] {
-    display: grid;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+/* container */
+ul[data-table]{
+  display: grid;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto;          /* show scroll when tighter than min-content sum */
+}
 
-    li {
-        display: grid;
-        margin: 0;
-        grid-template-columns: 6rem 7rem 7rem 5rem 7rem 6rem 6rem 6rem 7rem;
-        justify-content: start;
+/* one row with 9 content-based columns */
+ul[data-table] > li{
+  display: grid;
+  grid-template-columns: repeat(9, minmax(min-content, 1fr));
+  /* optional spacing
+  gap: .5rem;
+  */
+}
 
-        /* &:last-child {
-            border-bottom: none;
-        } */
+/* cells */
+ul[data-table] > li > span{
+  padding: 1rem;
+  border-block-end: 1px solid currentColor;
+  border-inline-end: 1px solid currentColor;
 
-        span {
-            border-block-end: 1px solid currentColor;
-            border-inline-end: 1px solid currentColor;
-            padding: 1rem;
-            /* display: block;
-            width: 100%; */
-            &:first-child {
-                font-weight: bold;
-            }
-        }
-    }
+  /* allow tracks to actually shrink to min-content */
+  min-width: 0;
+
+  /* make min-content smaller by allowing breaks */
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* optionally keep first column prominent without fixing a width */
+ul[data-table] > li > span:first-child{
+  font-weight: 700;
+  white-space: nowrap;   /* remove if you want it to wrap too */
 }

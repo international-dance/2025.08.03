@@ -47,9 +47,10 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   color: white;
   max-width: min(90vw, 80ch);
   padding: clamp(1rem, 5vw, 3rem);
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: clamp(0.5rem, 2vw, 1rem);
-  backdrop-filter: blur(10px);
+  /* background: rgba(0, 0, 0, 0.4); */
+  /* border-radius: clamp(0.5rem, 2vw, 1rem); */
+  /* backdrop-filter: blur(10px); */
+  text-shadow: 3px 3px 5px rgba(0,0,0,1.0);
 }
 
 .hero h1 {
@@ -57,7 +58,7 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: clamp(1rem, 3vw, 1.5rem);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
 }
 
 .hero p {
@@ -65,6 +66,10 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   line-height: 1.6;
   margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
   opacity: 0.95;
+}
+
+.hero-content svg path {
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,1.0));
 }
 
 .hero-actions {

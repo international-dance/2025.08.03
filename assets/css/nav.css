@@ -4,6 +4,9 @@ nav {
   z-index: 10;
   backdrop-filter: blur(5px);
   /* background-color: rgba(17, 24, 39, 0.4); */
+  /* background-color: #7B5955;
+  box-shadow: rgba(0,0,0,0.5) 0 3px 3px 0; */
+
 }
 
 nav label {
