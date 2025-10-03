@@ -25,13 +25,13 @@
   /*   grid-template-columns: repeat(calc(var(--column-count, 3) * 2), 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
-  @container (width >= calc(100px * 2 + 1rem)) {
+  @container (width >=calc(100px * 2 + 1rem)) {
     .item {
       grid-column: span 2;
     }
   }
 
-  @container (calc(100px * 4 + 3rem) < width < calc(100px * 6 + 5rem) ) {
+  @container (calc(100px * 4 + 3rem) < width < calc(100px * 6 + 5rem)) {
     .item:last-child:nth-child(odd) {
       grid-column: 2 / span 2;
     }
@@ -70,6 +70,7 @@
   text-align: center;
   color: rgba(255, 255, 255, 1);
 }
+
 .item p {
   margin: 1rem 2rem;
   text-align: center;

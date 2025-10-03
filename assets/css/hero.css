@@ -30,16 +30,38 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   background-attachment: fixed;
 }
 
-.hero-bg:nth-child(1) { animation-delay: 0s; }
-.hero-bg:nth-child(2) { animation-delay: 5s; }
-.hero-bg:nth-child(3) { animation-delay: 10s; }
+.hero-bg:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.hero-bg:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.hero-bg:nth-child(3) {
+  animation-delay: 10s;
+}
 
 @keyframes fadeSlideshow {
-  0% { opacity: 0; }
-  6.67% { opacity: 1; }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  6.67% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .hero-content {
@@ -50,7 +72,7 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   /* background: rgba(0, 0, 0, 0.4); */
   /* border-radius: clamp(0.5rem, 2vw, 1rem); */
   /* backdrop-filter: blur(10px); */
-  text-shadow: 3px 3px 5px rgba(0,0,0,1.0);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1.0);
 }
 
 .hero h1 {
@@ -69,7 +91,7 @@ https://codepen.io/dragontheory/pen/abeEEmz */
 }
 
 .hero-content svg path {
-  filter: drop-shadow(2px 2px 4px rgba(0,0,0,1.0));
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 1.0));
 }
 
 .hero-actions {
@@ -288,18 +310,16 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
-  background-image: linear-gradient(
-    to right,
-    #f7693c,
-    #c74e45,
-    #7d3785,
-    #582d9f,
-    #3928af,
-    #582d9f,
-    #7d3785,
-    #c74e45,
-    #f7693c
-  );
+  background-image: linear-gradient(to right,
+      #f7693c,
+      #c74e45,
+      #7d3785,
+      #582d9f,
+      #3928af,
+      #582d9f,
+      #7d3785,
+      #c74e45,
+      #f7693c);
   background-size: 200% auto;
   color: rgba(255, 255, 255, 1);
   display: inline-block;

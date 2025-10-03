@@ -1,14 +1,15 @@
 /* container */
-ul[data-table]{
+ul[data-table] {
   display: grid;
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow: auto;          /* show scroll when tighter than min-content sum */
+  overflow: auto;
+  /* show scroll when tighter than min-content sum */
 }
 
 /* one row with 9 content-based columns */
-ul[data-table] > li{
+ul[data-table] > li {
   display: grid;
   grid-template-columns: repeat(9, minmax(min-content, 1fr));
   /* optional spacing
@@ -17,7 +18,7 @@ ul[data-table] > li{
 }
 
 /* cells */
-ul[data-table] > li > span{
+ul[data-table] > li > span {
   padding: 1rem;
   border-block-end: 1px solid currentColor;
   border-inline-end: 1px solid currentColor;
@@ -31,7 +32,8 @@ ul[data-table] > li > span{
 }
 
 /* optionally keep first column prominent without fixing a width */
-ul[data-table] > li > span:first-child{
+ul[data-table] > li > span:first-child {
   font-weight: 700;
-  white-space: nowrap;   /* remove if you want it to wrap too */
+  white-space: nowrap;
+  /* remove if you want it to wrap too */
 }

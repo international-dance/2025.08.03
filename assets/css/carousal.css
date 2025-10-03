@@ -15,13 +15,13 @@
   --size-14: 20rem;
   --size-15: 30rem;
   --radius-round: 50%;
-      --radius-1: 2px;
-    --radius-2: 5px;
-    --radius-3: 1rem;
-    --radius-4: 2rem;
-    --radius-5: 4rem;
-    --radius-6: 8rem;
-        --surface-4: #868e96;
+  --radius-1: 2px;
+  --radius-2: 5px;
+  --radius-3: 1rem;
+  --radius-4: 2rem;
+  --radius-5: 4rem;
+  --radius-6: 8rem;
+  --surface-4: #868e96;
 }
 
 .carousel {
@@ -187,32 +187,32 @@
   }
 
   > figcaption {
-    >.episode-number {
+    > .episode-number {
       text-transform: uppercase;
       font-weight: 500;
       font-size: var(--font-size-0)
     }
 
-    >.episode-title {
+    > .episode-title {
       font-size: var(--font-size-3);
       font-weight: 700;
       line-height: 1cap;
       margin-block-start: var(--size-1)
     }
 
-    >.episode-description {
+    > .episode-description {
       margin-block: var(--size-2);
       font-weight: 300;
       font-size: var(--font-size-3)
     }
 
-    >.episode-meta {
+    > .episode-meta {
       display: flex;
       align-items: baseline;
       gap: var(--size-2);
       font-size: var(--font-size-1);
 
-      >.episode-badge {
+      > .episode-badge {
         line-height: 1cap;
         padding: var(--size-1);
         border-radius: var(--radius-2);

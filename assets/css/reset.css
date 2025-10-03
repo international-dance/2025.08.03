@@ -1,3 +1,6 @@
+/* MARK: RESET
+*/
+
 /* https://jakelazaroff.com/words/my-modern-css-reset/#user-content-fn-ackshually */
 
 @layer reset {
@@ -9,11 +12,14 @@
   }
 
   *,
+  * *,
+  *:before,
+  *:after,
   *::before,
   *::after {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   img,
