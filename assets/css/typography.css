@@ -6,7 +6,7 @@
   --header-font: Cinzel, "Times New Roman", Times;
   --font-weight: normal;
   --font-style: normal;
-  --font-optical-sizing: auto;
+  /* --font-optical-sizing: auto; */
   --line-height: 1.5;
   --letter-spacing: 0.05rem;
   --moz-osx-font-smoothing: grayscale;
@@ -17,7 +17,7 @@
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   font-style: var(--font-style);
-  font-optical-sizing: var(--font-optical-sizing);
+  /* font-optical-sizing: var(--font-optical-sizing); */
   line-height: var(--line-height);
   text-shadow: var(--txt-shadow);
   word-break: var(--word-break);
@@ -55,16 +55,30 @@ h5 {
   font-family: var(--header-font);
   color: rgba(var(--txt-color), 1.0);
   padding: 2rem;
-  font-weight: 100;
-  letter-spacing: 0.125rem;
+  /* font-weight: 100; */
+  /* letter-spacing: 0.125rem; */
   font-variant: small-caps;
   text-wrap: balance;
   text-align: center;
-  font-weight: normal;
+  /* font-weight: normal; */
 }
+
+/* Exceptions */
+main article:nth-of-type(1) section:nth-of-type(2) {
+  color: rgb(251, 216, 212, 1);
+  background-color: #7B5955;
+
+  h2 {
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    font-weight: 500;
+  }
+}
+
 p {
   padding: 2em;
 }
+
 hr {
   margin-block: 1em;
 }
