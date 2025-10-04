@@ -68,12 +68,16 @@ h5 {
 main article:nth-of-type(1) section:nth-of-type(2) {
   color: rgb(251, 216, 212, 1);
   background-color: #7B5955;
+}
 
-  h2 {
-    font-size: 1.5rem;
-    font-variant: small-caps;
-    font-weight: 500;
-  }
+h2 {
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {
@@ -85,6 +89,22 @@ p {
 
 hr {
   margin-block: 1em;
+  position: relative;
+  overflow: visible;
+  font-family: serif;
+}
+
+hr::before {
+  content: '\00A7';
+  color: rgba(255,255,255,1.0);
+  font-size: 4rem;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: rotate(90deg);
+  transform-origin: center;
+  opacity: .6;
+}
 }
 
 ol,
