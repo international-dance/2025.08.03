@@ -39,6 +39,7 @@ a:not([class]) {
   text-decoration-thickness: max(0.08em, 1px);
   text-underline-offset: 0.15em;
 }
+
 :focus-visible {
   --outline-size: max(2px, 0.15em);
 
@@ -55,7 +56,7 @@ h5 {
   font-family: var(--header-font);
   color: rgba(var(--txt-color), 1.0);
   padding: 2rem;
-  /* font-weight: 100; */
+  font-weight: 100;
   /* letter-spacing: 0.125rem; */
   font-variant: small-caps;
   text-wrap: balance;
@@ -76,7 +77,10 @@ main article:nth-of-type(1) section:nth-of-type(2) {
 }
 
 p {
-  padding: 2em;
+  padding-inline: 2em;
+  max-width: 85ch;
+  justify-self: center;
+  padding-block-end: 2rem;
 }
 
 hr {
