@@ -56,7 +56,7 @@
   }
 }
 
-.carousel[data-astro-cid-74ozrrro] {
+.carousel {
   & .carousel__slide {
     &.season-start::scroll-marker {
       @media (prefers-reduced-motion: no-preference) {
@@ -66,7 +66,7 @@
   }
 }
 
-/* .carousel[data-astro-cid-74ozrrro] {
+/* .carousel {
   & .carousel__slide {
     &.season-start::scroll-marker {
       content: "Season " attr(data-season-content);
@@ -81,7 +81,7 @@
   }
 } */
 
-.carousel[data-astro-cid-74ozrrro] {
+.carousel {
   inline-size: 100cqi;
   padding-block-start: var(--size-3);
   padding-inline: 5vmin;
@@ -150,7 +150,7 @@
   }
 }
 
-.episode[data-astro-cid-74ozrrro] {
+.episode {
   display: grid;
   line-height: 1.25;
   anchor-name: --episode;
