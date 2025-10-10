@@ -15,6 +15,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Electrolize&family=Geo:ital@0;1&family=Iceland&family=Lavishly+Yours&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Odibee+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Sarpanch:wght@400;500;600;700;800;900&family=Teko:wght@300..700&display=swap">
 		<link rel="stylesheet" href="assets/css/reset.css">
+		<link rel="stylesheet" href="assets/css/themes.css">
 		<link rel="stylesheet" href="assets/css/transitions.css">
 		<link rel="stylesheet" href="assets/css/layout.css">
 		<link rel="stylesheet" href="assets/css/nav.css">
@@ -23,7 +24,6 @@
 		<!-- <link rel="stylesheet" href="assets/css/cards.css"> -->
 		<!-- <link rel="stylesheet" href="assets/css/fonts.css"> -->
 		<link rel="stylesheet" href="assets/css/typography.css">
-		<link rel="stylesheet" href="assets/css/color-schemes.css">
 		<link rel="stylesheet" href="assets/css/data-tables.css">
 		<link rel="stylesheet" href="assets/css/waves.css">
 		<title>International.Dance - Happiness Through Dancing!</title>
@@ -161,7 +161,7 @@
 						<div class="card">
 							<h2>PERFORMANCES</h2>
 							<p>
-								Performances are held each spring for our annual recital. In addition to the Spring Recital, we carry on the tradition of our International Christmas Performance, which has delighted audiences for years. We also perform at the Green Spring Nursing Home throughout the year, spreading "<i>happiness through dancing.</i>"
+								Performances are held each spring for our annual recital. In addition to the Spring Recital, we carry on the tradition of our International Christmas Performance, which has delighted audiences for years. We also perform at community events throughout the year, spreading "<i>happiness through dancing.</i>"
 							</p>
 							<a href="#" role="button">More info</a>
 						</div>
@@ -364,20 +364,48 @@
 							</div>
 						</div>
 
-						<!--Waves Container-->
+						<svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+							<style>
+								/* one place controls palette */
+								.waves {
+									color: currentColor;
+									<!-- color: hsl(255 100% 100%); -->
+									<!-- color: hsl(200 100% 60%); -->
+								}
 
-						<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+								/* DRY: set fill once; vary opacity per clone */
+								.waves .parallax use {
+									fill: currentColor;
+								}
+
+								.waves .parallax use:nth-child(1) {
+									opacity: .70;
+								}
+
+								.waves .parallax use:nth-child(2) {
+									opacity: .50;
+								}
+
+								.waves .parallax use:nth-child(3) {
+									opacity: .30;
+								}
+
+								.waves .parallax use:nth-child(4) {
+									opacity: 1;
+								}
+							</style>
+
 							<defs>
-								<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+								<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
 							</defs>
+
 							<g class="parallax">
-								<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
-								<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
-								<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
-								<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+								<use href="#gentle-wave" x="48" y="0" />
+								<use href="#gentle-wave" x="48" y="3" />
+								<use href="#gentle-wave" x="48" y="5" />
+								<use href="#gentle-wave" x="48" y="7" />
 							</g>
 						</svg>
-						<!--Waves end-->
 
 
 
