@@ -42,6 +42,7 @@ a:not([class]) {
   text-underline-offset: 0.15em;
 }
 
+/* Accessibility */
 :focus-visible {
   --outline-size: max(2px, 0.15em);
 
@@ -50,12 +51,14 @@ a:not([class]) {
 }
 
 /* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#container-query-fluid-type */
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: var(--header-font);
+/* Reduce specificity to 0 */
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5) {
+ font-family: var(--header-font);
   color: rgba(var(--txt-color), 1.0);
   padding: 2rem;
   font-weight: 100;
@@ -67,7 +70,6 @@ h5 {
 }
 
 /* Exceptions */
-
 h2 {
   font-size: 1.5rem;
   font-variant: small-caps;
@@ -160,24 +162,27 @@ small {
   }
 }
 
-ul,
-ol,
-dl,
-dt,
-dd,
-p,
-figure,
-blockquote {
+/* Reduce specificity to 0 */
+:where(
+  ul,
+  ol,
+  dl,
+  dt,
+  dd,
+  p,
+  figure,
+  blockquote) {
   /* hanging-punctuation: first last; */
   text-wrap: pretty;
 }
 
-:is(th, td):first-child {
+:where(th, td):first-child {
   text-align: left;
 }
 
-:is(th, td):last-child {
+:where(th, td):last-child {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+
 
