@@ -51,7 +51,7 @@ a:not([class]) {
 }
 
 /* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#container-query-fluid-type */
-/* Reduce specificity to 0 */
+/* Specificity == 0 */
 :where(
   h1,
   h2,
@@ -133,7 +133,8 @@ h1 {
   font-size: 2rem;
 }
 
-/* :is(h2, h3) {
+/* Specificity == 0 */
+/* :where(h2, h3) {
   font-size: clamp(1.25rem, 5cqi, 1.5rem);
 } */
 
@@ -162,7 +163,7 @@ small {
   }
 }
 
-/* Reduce specificity to 0 */
+/* Specificity == 0 */
 :where(
   ul,
   ol,
@@ -184,5 +185,6 @@ small {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+
 
 
