@@ -1,43 +1,37 @@
 /* MARK: RESET
 */
 
-/* https://jakelazaroff.com/words/my-modern-css-reset/#user-content-fn-ackshually */
+*,
+* *,
+*:before,
+*:after,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-@layer reset {
-  :root {
-    /* https://developer.chrome.com/docs/css-ui/animate-to-height-auto */
-    interpolate-size: allow-keywords;
-    /* https://x.com/jh3yy/status/1885365324674928642 */
-    hyphens: auto;
-  }
-
-  *,
-  * *,
-  *:before,
-  *:after,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-
+  /* reduce specificity to 0 */
+:where(
   img,
   picture,
   video,
   canvas,
   svg {
-    display: block;
-    max-inline-size: 100%;
-  }
+  display: block;
+  max-inline-size: 100%;
+}
 
-  input,
+/* reduce specificity to 0 */
+:where(
   button,
-  textarea,
-  select {
-    font: inherit;
-    letter-spacing: inherit;
-    word-spacing: inherit;
-    color: currentColor;
-  }
+  input,
+  select,
+  textarea) {
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: currentColor;
 }
