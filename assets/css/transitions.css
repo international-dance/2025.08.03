@@ -1,4 +1,6 @@
 /* MARK: DEFINITIONS */
+
+/* https://jakelazaroff.com/words/my-modern-css-reset/#user-content-fn-ackshually */
 :root {
   --transition-duration: 250ms;
   --transition-property: visibility, opacity, display, transform, background, background-color, border-color, color, min-width;
@@ -6,8 +8,11 @@
 
   scroll-behavior: smooth;
 
-  /* https://html-css-tip-of-the-week.netlify.app/tip/interpolate-size/
-  https://12daysofweb.dev/2024/calc-size-and-interpolate-size/ */
+  /*
+  https://html-css-tip-of-the-week.netlify.app/tip/interpolate-size/
+  https://12daysofweb.dev/2024/calc-size-and-interpolate-size/ 
+  https://developer.chrome.com/docs/css-ui/animate-to-height-auto
+  */
   interpolate-size: allow-keywords;
 }
 
