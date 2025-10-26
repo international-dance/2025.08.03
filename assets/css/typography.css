@@ -23,6 +23,8 @@
   word-break: var(--word-break);
   -moz-osx-font-smoothing: var(--moz-osx-font-smoothing);
   -webkit-font-smoothing: var(--webkit-font-smoothing);
+  /* https://x.com/jh3yy/status/1885365324674928642 */
+  hyphens: auto;
 }
 
 /* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/Baseline for default links */
@@ -178,3 +180,4 @@ blockquote {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+
