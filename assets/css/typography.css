@@ -51,7 +51,9 @@ a:not([class]) {
 }
 
 /* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#container-query-fluid-type */
-/* Specificity == 0 */
+/* https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list
+- Forgiving selector list
+- Specificity == 0 */
 :where(
   h1,
   h2,
@@ -133,7 +135,9 @@ h1 {
   font-size: 2rem;
 }
 
-/* Specificity == 0 */
+/* https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list
+- Forgiving selector list
+- Specificity == 0 */
 /* :where(h2, h3) {
   font-size: clamp(1.25rem, 5cqi, 1.5rem);
 } */
@@ -163,7 +167,9 @@ small {
   }
 }
 
-/* Specificity == 0 */
+/* https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list
+- Forgiving selector list
+- Specificity == 0 */
 :where(
   ul,
   ol,
@@ -177,14 +183,17 @@ small {
   text-wrap: pretty;
 }
 
+/* https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list
+- Forgiving selector list
+- Specificity == 0 */
 :where(th, td):first-child {
   text-align: left;
 }
 
+/* https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list
+- Forgiving selector list
+- Specificity == 0 */
 :where(th, td):last-child {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-
-
-
