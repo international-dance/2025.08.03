@@ -54,11 +54,11 @@
 			<main>
 				<article>
 					<section class="hero">
-						<div class="hero-backgrounds">
+						<!-- <div class="hero-backgrounds">
 							<div class="hero-bg" style="background-image: url('assets/images/hero/01.jpg')"></div>
 							<div class="hero-bg" style="background-image: url('assets/images/hero/02.jpg')"></div>
 							<div class="hero-bg" style="background-image: url('assets/images/hero/03.jpg')"></div>
-						</div>
+						</div> -->
 
 						<div class="hero-content">
 							<!-- <h2>Welcome to</h2>
@@ -364,50 +364,25 @@
 							</div>
 						</div>
 
-						<svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-							<style>
-								/* one place controls palette */
-								.waves {
-									color: currentColor;
-									< !-- color: hsl(255 100% 100%);
-									-->< !-- color: hsl(200 100% 60%);
-									-->
-								}
+						<div class="header22">
 
-								/* DRY: set fill once; vary opacity per clone */
-								.waves .parallax use {
-									fill: currentColor;
-								}
+							<!--Waves Container-->
+							<div>
+								<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+									<defs>
+										<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+									</defs>
+									<g class="parallax">
+										<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+										<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+										<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+										<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+									</g>
+								</svg>
+							</div>
+							<!--Waves end-->
 
-								.waves .parallax use:nth-child(1) {
-									opacity: .70;
-								}
-
-								.waves .parallax use:nth-child(2) {
-									opacity: .50;
-								}
-
-								.waves .parallax use:nth-child(3) {
-									opacity: .30;
-								}
-
-								.waves .parallax use:nth-child(4) {
-									opacity: 1;
-								}
-							</style>
-
-							<defs>
-								<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
-							</defs>
-
-							<g class="parallax">
-								<use href="#gentle-wave" x="48" y="0" />
-								<use href="#gentle-wave" x="48" y="3" />
-								<use href="#gentle-wave" x="48" y="5" />
-								<use href="#gentle-wave" x="48" y="7" />
-							</g>
-						</svg>
-
+						</div>
 
 
 					</section>
