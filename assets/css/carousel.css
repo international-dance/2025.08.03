@@ -1,3 +1,5 @@
+/* MARK: CAROUSEL  */
+
 :root {
   --size-1: .25rem;
   --size-2: .5rem;
@@ -31,10 +33,6 @@
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth
-  }
 }
 
 .carousel__slide {
@@ -42,7 +40,7 @@
 
   :where(.carousel--offscreen-inert) & {
     animation: offscreen-inert linear both;
-    animation-timeline: view(x)
+    animation-timeline: view(x);
   }
 
   :where(.carousel--unsnapped-inert) & {
@@ -50,17 +48,7 @@
 
     > * {
       @container not scroll-state(snapped) {
-        interactivity: inert
-      }
-    }
-  }
-}
-
-.carousel {
-  & .carousel__slide {
-    &.season-start::scroll-marker {
-      @media (prefers-reduced-motion: no-preference) {
-        transition: text-decoration .8s ease, font-variation-settings .3s ease;
+        interactivity: inert;
       }
     }
   }
@@ -101,14 +89,14 @@
     margin-inline-start: 5vmin;
     block-size: 1lh;
     display: flex;
-    gap: var(--size-7)
+    gap: var(--size-7);
   }
 
   &:before,
   &:after {
     content: "";
     display: block;
-    inline-size: 85cqi
+    inline-size: 85cqi;
   }
 
   .carousel__slide {
@@ -117,7 +105,7 @@
     container-type: scroll-state;
 
     &:nth-child(1 of: has(figure:not(.seen))) {
-      scroll-initial-target: nearest
+      scroll-initial-target: nearest;
     }
 
     &.season-start::scroll-marker {
@@ -131,21 +119,21 @@
       cursor: pointer;
 
       @media (prefers-reduced-motion: no-preference) {
-        transition: text-decoration .8s ease, font-variation-settings .3s ease
+        transition: text-decoration .8s ease, font-variation-settings .3s ease;
       }
     }
 
     &.season-start::scroll-marker:is(:hover, :focus-visible, :target-current) {
-      color: var(--text-1)
+      color: var(--text-1);
     }
 
     &.season-start::scroll-marker:target-current {
       text-decoration-color: var(--link);
-      font-variation-settings: "wght" 800
+      font-variation-settings: "wght" 800;
     }
 
     &.season-start::scroll-marker:focus-visible {
-      outline-offset: 10px
+      outline-offset: 10px;
     }
   }
 }
@@ -169,11 +157,11 @@
     inline-size: var(--size-5);
     aspect-ratio: 1;
     border-radius: var(--radius-round);
-    border: 1px solid white
+    border: 1px solid white;
   }
 
   &.unreleased {
-    opacity: .25
+    opacity: .25;
   }
 
   > img {
@@ -182,7 +170,7 @@
     transition: filter .3s var(--ease-3);
 
     @container not scroll-state(snapped: inline) {
-      filter: grayscale(1)
+      filter: grayscale(1);
     }
   }
 
@@ -190,20 +178,20 @@
     > .episode-number {
       text-transform: uppercase;
       font-weight: 500;
-      font-size: var(--font-size-0)
+      font-size: var(--font-size-0);
     }
 
     > .episode-title {
       font-size: var(--font-size-3);
       font-weight: 700;
       line-height: 1cap;
-      margin-block-start: var(--size-1)
+      margin-block-start: var(--size-1);
     }
 
     > .episode-description {
       margin-block: var(--size-2);
       font-weight: 300;
-      font-size: var(--font-size-3)
+      font-size: var(--font-size-3);
     }
 
     > .episode-meta {
@@ -216,7 +204,7 @@
         line-height: 1cap;
         padding: var(--size-1);
         border-radius: var(--radius-2);
-        border: 1px solid var(--surface-4)
+        border: 1px solid var(--surface-4);
       }
     }
   }

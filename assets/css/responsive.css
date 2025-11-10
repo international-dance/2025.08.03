@@ -6,3 +6,71 @@
     display: none;
   }
 } */
+
+/* MARK: HERO
+*/
+
+@media (max-width: 375px) {
+  .hero-content svg {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    margin-block-end: 8rem;
+  }
+}
+
+/* MARK: NAV
+*/
+
+@media (max-width: 575px) {
+  nav label:not(:last-child) {
+    display: none;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  nav label:last-child {
+    display: grid;
+  }
+}
+
+/* MARK: WAVES
+*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+
+/* MARK: CAROUSEL
+*/
+
+.carousel {
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth
+  }
+}
+
+.carousel {
+  & .carousel__slide {
+    &.season-start::scroll-marker {
+      @media (prefers-reduced-motion: no-preference) {
+        transition: text-decoration .8s ease, font-variation-settings .3s ease;
+      }
+    }
+  }
+}
+
+.carousel__slide {
+
+  &.season-start::scroll-marker {
+    @media (prefers-reduced-motion: no-preference) {
+      transition: text-decoration .8s ease, font-variation-settings .3s ease
+    }
+  }
+}

@@ -7,8 +7,7 @@
   z-index: 0;
 }
 
-:where(
-  html,
+:where(html,
   body,
   app-container,
   header,
@@ -21,16 +20,13 @@
   li,
   figure,
   aside,
-  footer
-) {
+  footer) {
   display: grid;
 }
 
-:where(
-  html,
+:where(html,
   body,
-  app-container
-) {
+  app-container) {
   overflow: hidden;
 }
 
@@ -78,13 +74,20 @@ main {
   overflow: hidden;
 }
 
-article {
+main article {
   display: none;
   overflow: overlay;
   align-content: start;
   overflow-x: hidden;
   transition: opacity 0.25s;
   opacity: 0;
+
+  hr {
+    margin-block: 1em;
+    position: relative;
+    overflow: visible;
+    font-family: serif;
+  }
 }
 
 section {
@@ -92,26 +95,25 @@ section {
 }
 
 main article:nth-of-type(1) section:nth-of-type(1) {
-  height: 100dvh;
-  place-items: center;
-  min-block-size: 100dvh;
-  inline-size: 100%;
+  /* height: 100dvh; */
+  /* place-items: center; */
+  /* min-block-size: 100dvh; */
+  /* inline-size: 100%; */
   position: relative;
   overflow: hidden;
 }
 
 main article:nth-of-type(1) section:nth-of-type(2) {
   --card-min: 20rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-min)), 1fr));
-  gap: 3rem;
-  padding-inline: 4rem;
-  padding-block: 4rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-min)), 1fr)); */
+  /* gap: 3rem; */
+  /* padding-inline: 4rem; */
+  padding-block-end: 4rem;
 
   .card {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-auto-flow: row;
     /* padding: 2rem; */
-    border-radius: .5rem;
+    /* border-radius: .5rem; */
 
     p {
       padding-block-start: 0;
@@ -152,7 +154,7 @@ figure {
 }
 
 figure img {
-    padding-inline-start: 2rem;
+  padding-inline-start: 2rem;
 }
 
 figure h3 {
@@ -160,13 +162,9 @@ figure h3 {
   padding-block: 0;
 }
 
-aside {
-  grid-template-columns: 1fr;
-}
-
 footer {
-    grid-auto-flow: column;
-    justify-content: space-between;
+  grid-auto-flow: column;
+  justify-content: space-between;
 
   app-copy {
     padding-block: 0.5rem;

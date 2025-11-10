@@ -1,12 +1,9 @@
-@layer nav;
+/* MARK: NAV
+*/
 
 nav {
   z-index: 10;
   backdrop-filter: blur(5px);
-  /* background-color: rgba(17, 24, 39, 0.4); */
-  /* background-color: #7B5955;
-  box-shadow: rgba(0,0,0,0.5) 0 3px 3px 0; */
-
 }
 
 nav label {
@@ -39,23 +36,13 @@ nav:has(input:nth-of-type(6):checked) ~ main article:nth-of-type(6) {
   opacity: 1;
 }
 
-@media (max-width: 575px) {
-  nav label:not(:last-child) {
-    display: none;
-  }
-
-  nav label:last-child {
-    display: block;
-  }
-}
-
 app-container:has(#toggleNav:checked) {
   nav {
     grid-template-columns: 1fr;
   }
 
   label:not(:last-child) {
-    display: block;
+    display: grid;
     width: 100%;
   }
 
@@ -64,48 +51,3 @@ app-container:has(#toggleNav:checked) {
     right: 0;
   }
 }
-
-/* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/
-
-nav[style*="width"]::before {
-  display: none;
-}
-[style*="width"]::before {
-  content: attr(style);
-  color: var(--color-on-background);
-  font-size: 1rem;
-  letter-spacing: 0.03em;
-  line-height: 0;
-  position: absolute;
-}
-
-
-@media (any-hover: hover) and (any-pointer: fine) {
-  nav {
-    overflow: auto;
-    position: relative;
-    resize: horizontal;
-  }
-
-  nav::after,
-  nav::before {
-    color: var(--color-on-background);
-    font-size: 1rem;
-    letter-spacing: 0.03em;
-    line-height: 0;
-    position: absolute;
-  }
-
-  nav::after {
-    bottom: 0.75rem;
-    content: "Resize me!";
-    right: 0.85rem;
-  }
-
-  nav::before {
-    content: attr(style);
-    left: 0.85rem;
-    top: 0.85rem;
-  }
-}
-*/

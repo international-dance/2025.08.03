@@ -99,13 +99,6 @@ p {
   padding-block-end: 2rem;
 }
 
-hr {
-  margin-block: 1em;
-  position: relative;
-  overflow: visible;
-  font-family: serif;
-}
-
 hr::before {
   content: '\00A7';
   color: rgba(255,255,255,1.0);

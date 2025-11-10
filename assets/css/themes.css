@@ -2,7 +2,7 @@
 */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
   /* ===== BLACK & WHITE THEME (single declaration using light-dark()) ===== */
   /* Use space-separated RGB tokens so you can do: rgb(var(--x) / var(--x-opacity)) */
@@ -110,6 +110,10 @@ app-container > * {
   background-color: rgba(var(--bg-panel-color), var(--bg-panel-opacity));
 }
 
+.hero-content {
+  color: var(--accent);
+}
+
 [role="button"],
 button {
   --bg-panel-opacity: 0.1;
@@ -140,6 +144,12 @@ background: */
   background-size: 100% 36px, 100% 36px, 100% 5px, 100% 5px;
 }
 */
+
+/* nav {
+  background-color: rgba(17, 24, 39, 0.4);
+  background-color: #7B5955;
+  box-shadow: rgba(0,0,0,0.5) 0 3px 3px 0;
+} */
 
 .card {
   color: rgb(61, 44, 42, .75);

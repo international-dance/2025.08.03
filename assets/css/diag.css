@@ -1,0 +1,44 @@
+/* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
+
+nav[style*="width"]::before {
+  display: none;
+}
+
+[style*="width"]::before {
+  content: attr(style);
+  color: var(--color-on-background);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  line-height: 0;
+  position: absolute;
+}
+
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  nav {
+    overflow: auto;
+    position: relative;
+    resize: horizontal;
+  }
+
+  nav::after,
+  nav::before {
+    color: var(--color-on-background);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    line-height: 0;
+    position: absolute;
+  }
+
+  nav::after {
+    bottom: 0.75rem;
+    content: "Resize me!";
+    right: 0.85rem;
+  }
+
+  nav::before {
+    content: attr(style);
+    left: 0.85rem;
+    top: 0.85rem;
+  }
+}
