@@ -1,14 +1,16 @@
 .header22 {
   position: absolute;
   text-align: center;
-  background: transparent;
-  color: white;
+  background-color: transparent;
+  color: #FDB8D4;
   width: 100%;
   left: 0;
   bottom: 0;
 }
 
 .waves {
+  --wave-color: 251, 216, 212; /* #FDB8D4; rgb(251, 216, 212, 1) */
+
   position: relative;
   width: 100%;
   height: 15vh;
