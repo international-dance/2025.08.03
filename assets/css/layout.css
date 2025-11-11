@@ -88,8 +88,10 @@ main article {
     margin-block: 4em;
     position: relative;
     overflow: visible;
-    font-family: Times New Roman, serif;
+    font-family: "Times New Roman", Times, serif;
     opacity: 0.6;
+    background-color: rgba(255,255,255,0.7);
+    height: 2px;
   }
 
   hr::before,
