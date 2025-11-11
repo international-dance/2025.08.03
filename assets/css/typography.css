@@ -106,11 +106,11 @@ p {
 hr::before {
   content: '\00A7';
   color: rgba(255,255,255,1.0);
-  font-size: 12rem;
+  font-size: 7rem;
   position: absolute;
   transform: rotate(90deg);
   place-self: center;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 ol,
