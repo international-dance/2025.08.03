@@ -73,9 +73,13 @@ a:not([class]) {
 
 /* Exceptions */
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   font-variant: small-caps;
   font-weight: 500;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -102,12 +106,10 @@ p {
 hr::before {
   content: '\00A7';
   color: rgba(255,255,255,1.0);
-  font-size: 4rem;
+  font-size: 12rem;
   position: absolute;
-  top: -3rem;
-  left: 50%;
   transform: rotate(90deg);
-  transform-origin: center;
+  place-self: center;
   opacity: .6;
 }
 

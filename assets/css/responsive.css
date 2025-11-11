@@ -16,9 +16,9 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .hero-content {
-    margin-block-end: 8rem;
+    margin-block-end: 4rem;
   }
 }
 

@@ -31,6 +31,7 @@
 }
 
 app-container {
+  /* Required for proper overflow.  */
   height: 100dvh;
 }
 
@@ -83,7 +84,8 @@ main article {
   opacity: 0;
 
   hr {
-    margin-block: 1em;
+    display: grid;
+    margin-block: 4em;
     position: relative;
     overflow: visible;
     font-family: serif;
@@ -94,6 +96,7 @@ section {
   position: relative;
 }
 
+/* Hero */
 main article:nth-of-type(1) section:nth-of-type(1) {
   /* height: 100dvh; */
   /* place-items: center; */
@@ -101,10 +104,15 @@ main article:nth-of-type(1) section:nth-of-type(1) {
   /* inline-size: 100%; */
   position: relative;
   overflow: hidden;
+
+  .hero-content {
+    margin-block-end: 10rem;
+  }
 }
 
+/* Cards */
 main article:nth-of-type(1) section:nth-of-type(2) {
-  --card-min: 20rem;
+  /* --card-min: 20rem; */
   /* grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-min)), 1fr)); */
   /* gap: 3rem; */
   /* padding-inline: 4rem; */
@@ -122,15 +130,17 @@ main article:nth-of-type(1) section:nth-of-type(2) {
 }
 
 [role="button"] {
-  border-radius: .5rem;
-  cursor: pointer;
+  border: none;
+  border-radius: .4rem;
   padding-block: 1rem;
   padding-inline: 2rem;
   width: fit-content;
   margin-inline: 1rem;
+  margin-block-end: 2rem;
   text-decoration: none;
   justify-self: center;
-  margin-block-end: 2rem;
+  user-select: none;
+  cursor: pointer;
 }
 
 main article:nth-of-type(1) section:nth-of-type(3) {
