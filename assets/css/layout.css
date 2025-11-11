@@ -88,7 +88,35 @@ main article {
     margin-block: 4em;
     position: relative;
     overflow: visible;
-    font-family: serif;
+    font-family: Times New Roman, serif;
+    opacity: 0.6;
+  }
+
+  hr::before,
+  hr::after {
+    display: grid;
+    content: '\00A7';
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 7rem;
+    position: absolute;
+    transform: scaleX(1.1);
+    transform-origin: center;
+    place-self: center;
+    opacity: 0.6;
+  }
+
+  hr::before {
+    padding-block-end: 4.5rem;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    text-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
+  }
+
+  hr::after {
+    padding-block-start: 4.5rem;
+    transform: rotate(90deg) scaleY(-1);
+    transform-origin: center;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.5);
   }
 }
 
