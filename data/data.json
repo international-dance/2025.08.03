@@ -1,0 +1,24 @@
+{
+  "tabs": [
+    {
+      "key": "home",
+      "section": "<h1>Welcome</h1><p>…</p>"
+    },
+    {
+      "key": "about",
+      "section": "<h1>About Us</h1><p>…</p>"
+    },
+    {
+      "key": "classes",
+      "section": "<h1>About Us</h1><p>…</p>"
+    },
+    {
+      "key": "history",
+      "section": "<h1>About Us</h1><p>…</p>"
+    },
+    {
+      "key": "contact",
+      "section": "<h1>About Us</h1><p>…</p>"
+    }
+  ]
+}
