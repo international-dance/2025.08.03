@@ -37,14 +37,13 @@ nav {
   }
 }
 
-/* Maps NAV checked boxes to article visibility */
-nav:has(>label input:nth-of-type(1):checked) ~ main > article:nth-of-type(1),
-nav:has(>label input:nth-of-type(1):checked) ~ main > article:nth-of-type(1),
-nav:has(>label input:nth-of-type(2):checked) ~ main > article:nth-of-type(2),
-nav:has(>label input:nth-of-type(3):checked) ~ main > article:nth-of-type(3),
-nav:has(>label input:nth-of-type(4):checked) ~ main > article:nth-of-type(4),
-nav:has(>label input:nth-of-type(5):checked) ~ main > article:nth-of-type(5),
-nav:has(>label input:nth-of-type(6):checked) ~ main > article:nth-of-type(6) {
+/* Map NAV labels (by order) to MAIN articles (by order) */
+nav:has(> label:nth-of-type(1) input:checked) ~ main > article:nth-of-type(1),
+nav:has(> label:nth-of-type(2) input:checked) ~ main > article:nth-of-type(2),
+nav:has(> label:nth-of-type(3) input:checked) ~ main > article:nth-of-type(3),
+nav:has(> label:nth-of-type(4) input:checked) ~ main > article:nth-of-type(4),
+nav:has(> label:nth-of-type(5) input:checked) ~ main > article:nth-of-type(5),
+nav:has(> label:nth-of-type(6) input:checked) ~ main > article:nth-of-type(6) {
   display: grid;
   opacity: 1;
 }
@@ -65,3 +64,4 @@ nav label:last-child {
   position: absolute;
   right: 0;
 }
+
