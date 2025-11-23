@@ -18,7 +18,8 @@
   picture,
   video,
   canvas,
-  svg {
+  svg
+  ) {
   display: block;
   max-inline-size: 100%;
 }
@@ -28,7 +29,8 @@
   button,
   input,
   select,
-  textarea) {
+  textarea
+  ) {
   font-family: inherit;
   font-size: inherit;
   letter-spacing: inherit;

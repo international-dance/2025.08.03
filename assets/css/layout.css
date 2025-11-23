@@ -7,7 +7,8 @@
   z-index: 0;
 }
 
-:where(html,
+:where(
+  html,
   body,
   app-container,
   header,
@@ -20,13 +21,17 @@
   li,
   figure,
   aside,
-  footer) {
+  footer
+  ) {
   display: grid;
 }
 
-:where(html,
+:where(
+  html,
   body,
-  app-container) {
+  app-container,
+  main
+  ) {
   overflow: hidden;
 }
 
@@ -39,40 +44,11 @@ header {
   grid-auto-flow: column;
   justify-content: space-between;
 
-  app-logo {
-    padding-block: 0.5rem;
-    padding-inline: 1rem;
-  }
-
+  app-logo,
   app-user {
-    padding-block: 0.5rem;
+    padding-block: 1rem;
     padding-inline: 1rem;
   }
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: end;
-
-  input {
-    position: absolute;
-    left: -200dvw;
-  }
-
-  label {
-    display: block;
-    padding: 0.5rem 1rem;
-    word-break: nobreak;
-    cursor: pointer;
-    word-break: keep-all;
-    width: max-content;
-  }
-}
-
-main {
-  overflow: hidden;
 }
 
 main article {
@@ -90,7 +66,7 @@ main article {
     overflow: visible;
     font-family: "Times New Roman", Times, serif;
     opacity: 0.6;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     height: 2px;
   }
 
