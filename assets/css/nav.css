@@ -48,7 +48,7 @@ nav:has(> label:nth-of-type(6) input:checked) ~ main > article:nth-of-type(6) {
   opacity: 1;
 }
 
-nav label:has([aria-label="Toggle"]:checked) {
+nav label[aria-label="Toggle"]:has(input:checked) {
   position: fixed;
   inset: 0;
   /* grid-template-columns: 1fr;
@@ -64,4 +64,3 @@ nav label:last-child {
   position: absolute;
   right: 0;
 }
-

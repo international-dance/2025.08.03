@@ -35,6 +35,24 @@
   nav label:last-child {
     display: grid;
   }
+
+  nav:has(> label[aria-label="Toggle"] input:checked) {
+    position: fixed;
+    inset: 0;
+    padding: 3rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    grid-auto-flow: row;
+    align-content: start;
+    gap: 1rem;
+  }
+
+  nav:has(> label[aria-label="Toggle"] input:checked) label:not(:last-child) {
+    display: grid;
+  }
+
+  nav:has(> label[aria-label="Toggle"] input:checked) label:last-child {
+    justify-self: end;
+  }
 }
 
 /* MARK: WAVES

@@ -94,37 +94,6 @@
 					HOME
 					<input type="radio" name="nav" checked>
 				</label>
-				<label aria-controls="ABOUT">
-					ABOUT
-					<input type="radio" name="nav">
-				</label>
-				<label aria-controls="CLASSES">
-					CLASSES
-					<input type="radio" name="nav">
-				</label>
-				<label aria-controls="HISTORY">
-					HISTORY
-					<input type="radio" name="nav">
-				</label>
-				<label aria-controls="POLICY">
-					POLICY
-					<input type="radio" name="nav">
-				</label>
-				<label aria-controls="CONTACT">
-					CONTACT
-					<input type="radio" name="nav">
-				</label>
-				<label aria-label="Toggle">
-					☰
-					<input type="checkbox">
-				</label>
-			</nav>
-
-			<main>
-				<article>
-					<section class="hero">
-						<!-- <div class="hero-backgrounds">
-							<div class="hero-bg" style="background-image: url('assets/images/hero/01.jpg')"></div>
 							<div class="hero-bg" style="background-image: url('assets/images/hero/02.jpg')"></div>
 							<div class="hero-bg" style="background-image: url('assets/images/hero/03.jpg')"></div>
 						</div> -->
@@ -1341,37 +1310,5 @@
 				</app-social>
 			</footer>
 		</app-container>
-		<script type="module">
-		  let tabData;
-		
-		  async function fetchTabs() {
-		    if (tabData) return tabData;
-		    const res = await fetch('./data/tabs.json', { cache: 'no-store' });
-		    tabData = await res.json();
-		    return tabData;
-		  }
-		
-		  async function updateContent(value) {
-		    const data = await fetchTabs();
-		    const found = data.tabs.find(tab => tab.key === value);
-		    if (found) {
-		      const article = document.querySelector('main > article > section');
-		      // clear existing children then inject new HTML
-		      article.replaceChildren();
-		      article.insertAdjacentHTML('beforeend', found.body);
-		    }
-		  }
-		
-		  // Initial load
-		  updateContent(document.querySelector('nav input[name="tab"]:checked').value);
-		
-		  // Event listener on nav
-		  document.querySelector('nav').addEventListener('change', (evt) => {
-		    if (evt.target.matches('input[name="tab"]')) {
-		      updateContent(evt.target.value);
-		    }
-		  });
-		</script>
 	</body>
 </html>
-
