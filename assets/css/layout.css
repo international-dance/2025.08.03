@@ -7,8 +7,7 @@
   z-index: 0;
 }
 
-:where(
-  html,
+:where(html,
   body,
   app-container,
   header,
@@ -21,17 +20,14 @@
   li,
   figure,
   aside,
-  footer
-  ) {
+  footer) {
   display: grid;
 }
 
-:where(
-  html,
+:where(html,
   body,
   app-container,
-  main
-  ) {
+  main) {
   overflow: hidden;
 }
 
@@ -64,10 +60,11 @@ main article {
     margin-block: 4em;
     position: relative;
     overflow: visible;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Cinzel", serif;
     opacity: 0.6;
     background-color: rgba(255, 255, 255, 0.7);
     height: 2px;
+    transform: scale(1.5, 1.25);
   }
 
   hr::before,
@@ -85,16 +82,18 @@ main article {
 
   hr::before {
     padding-block-end: 4.5rem;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     transform-origin: center;
-    text-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.25);
+    margin-block-end: 1.5rem;
   }
 
   hr::after {
     padding-block-start: 4.5rem;
-    transform: rotate(90deg) scaleY(-1);
+    transform: rotate(-90deg) scaleY(-1);
     transform-origin: center;
-    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.5);
+    text-shadow: -1px 0 0 rgba(0, 0, 0, 0.25);
+    margin-block-end: 1.5rem;
   }
 }
 
@@ -151,22 +150,48 @@ main article:nth-of-type(1) section:nth-of-type(2) {
 
 main article:nth-of-type(1) section:nth-of-type(3) {
 
-  > div {
-    container-type: inline-size;
-    /* place-content: center; */
-    gap: 5vmin;
-    /* padding-block: 3vmin 5vmin; */
+  figure {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
 
-    p {
-      padding: 1rem;
+    figcaption {
+      display: grid;
+      grid-auto-flow: row;
+      align-content: start;
+
+      h2 {
+        display: grid;
+        justify-self: start;
+        padding: 0;
+        margin-block-end: 1rem;
+        margin-inline: 1rem;
+      }
+
+      p {
+        padding: 0;
+        margin-block-end: 1rem;
+        margin-inline: 1rem;
+        justify-self: start;
+      }
+
+      [role="button"] {
+        margin: 1rem;
+        justify-self: start;
     }
   }
 }
 
-figure {
-  grid-template-columns: 1fr 1fr;
-  justify-self: center;
-  max-width: 85ch;
+> div {
+  container-type: inline-size;
+  /* place-content: center; */
+  gap: 5vmin;
+  /* padding-block: 3vmin 5vmin; */
+
+  p {
+    padding: 1rem;
+  }
+}
 }
 
 figure img {

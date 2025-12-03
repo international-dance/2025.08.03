@@ -100,5 +100,5 @@ app-logo svg {
   inset-inline-start: 1rem;
   width: 20rem;
   height: auto;
-  z-index: 10;
+  z-index: 15;
 }

@@ -5,8 +5,10 @@ nav {
   grid-auto-flow: column;
   justify-content: end;
   gap: .7rem;
-  z-index: 10;
-  margin-block-end: 5rem;
+  /* z-index: 10; */
+  padding-block-end: 1rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
 
   label {
     display: grid;
@@ -18,10 +20,6 @@ nav {
     text-transform: capitalize;
     transition: background-color 250ms ease-in-out;
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
     &:last-child {
       display: none;
     }
@@ -29,10 +27,6 @@ nav {
     input {
       position: absolute;
       left: -200dvw;
-    }
-
-    &:has(input:checked) {
-      background-color: rgba(255, 255, 255, 0.2);
     }
   }
 }

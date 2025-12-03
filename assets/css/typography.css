@@ -19,7 +19,6 @@
   font-style: var(--font-style);
   /* font-optical-sizing: var(--font-optical-sizing); */
   line-height: var(--line-height);
-  text-shadow: var(--txt-shadow);
   word-break: var(--word-break);
   -moz-osx-font-smoothing: var(--moz-osx-font-smoothing);
   -webkit-font-smoothing: var(--webkit-font-smoothing);

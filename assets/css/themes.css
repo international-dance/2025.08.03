@@ -2,67 +2,26 @@
 */
 
 :root {
-  color-scheme: dark;
+  --bg-light: 251, 216, 212;
+  --bg-dark: 45, 34, 33;
+  --bg-emphasis: 185, 133, 128;
+  --bg-active: var(--bg-emphasize);
 
-  /* ===== BLACK & WHITE THEME (single declaration using light-dark()) ===== */
-  /* Use space-separated RGB tokens so you can do: rgb(var(--x) / var(--x-opacity)) */
+  --fg-light: 251, 216, 212;
+  --fg-dark: 45, 34, 33;
+  --fg-emphasis: 255, 255, 255;
+  --fg-shadow: 0, 0, 0;
 
-  /* Backgrounds */
-  --bg-color: light-dark(rgb(255 255 255), rgb(0 0 0));
-
-  --bg-opacity:      1.0;
-
-  --bg-02-color:     light-dark(245 245 245, 20 20 20);
-  --bg-02-opacity:   1.0;
-
-  --bg-panel-color:  light-dark(0 0 0, 255 255 255);
-  --bg-panel-opacity: light-dark(0.05, 0.10);
-
-  --bg-active-color: light-dark(0 0 0, 255 255 255);
-  --bg-active-opacity: light-dark(0.05, 0.10);
-
-  /* Accent surface (remains monochrome in strict B/W) */
-  --bg-accent-color: light-dark(0 0 0, 255 255 255);
-  --bg-accent-opacity: 0.5;
-
-  /* Monochrome gradient */
-  --bg-grd: linear-gradient(
-    180deg,
-    light-dark(rgb(255 255 255 / 0.90), rgb(0 0 0 / 0.90)) 0%,
-    light-dark(rgb(255 255 255 / 0.60), rgb(0 0 0 / 0.60)) 100%
-  );
-
-  /* Text */
-  --txt-color:           light-dark(0 0 0, 255 255 255);
-  --txt-opacity:         1.0;
-
-  --txt-active:          light-dark(0 0 0, 255 255 255);
-  --txt-active-opacity:  1.0;
-
-  /* Keep links monochrome; rely on underline/weight for affordance */
-  --txt-link:            light-dark(0 0 0, 255 255 255);
-  --txt-link-opacity:    .75;
-
-  --txt-muted:           light-dark(80 80 80, 180 180 180);
-  --txt-muted-opacity:   0.5;
-
-  /* Shadow (flip automatically with scheme) */
-  --txt-shadow-color:    light-dark(255 255 255, 0 0 0);
-  --txt-shadow-opacity:  light-dark(0.25, 0.50);
-  --txt-shadow:          -1px 1px 0 rgb(var(--txt-shadow-color) / var(--txt-shadow-opacity));
-
-  /* Accents strictly B/W */
-  --accent:  light-dark(#000000, #ffffff);
-  --accent2: light-dark(0 0 0, 255 255 255);
-
-  /* Native form control accent */
-  accent-color: light-dark(#000000, #ffffff);
+  --grd-light: linear-gradient(180deg,
+      rgb(var(--fg-emphasis) / 0.90)),
+    rgb(0 0 0 / 0.90) 0%,
+    rgb(var(--fg-emphasis) / 0.60) 100%;
 }
 
 /* MARK: LOOK/FEEL
 */
 body {
-  background-color: rgba(var(--bg-color), var(--bg-opacity));
+  background-color: rgba(var(--bg-dark), 1.0);
 
   &::before {
     content: "";
@@ -81,91 +40,91 @@ body {
 }
 
 main article:nth-of-type(1) section:nth-of-type(1) {
-  color: rgb(251, 216, 212, 1);
+  color: rgb(var(--fg-light), 1);
 }
 
 main article:nth-of-type(1) section:nth-of-type(2) {
-  color: rgb(251, 216, 212, 1);
-  background-color: rgb(251, 216, 212, 1);
+  color: rgb(var(--bg-light), 1);
+  background-color: rgb(var(--bg-light), 1);
 }
 
 main article:nth-of-type(1) section:nth-of-type(3) {
   display: grid;
-  background-color: rgba(61, 44, 42, .64);
+  background-color: rgba(var(--bg-dark), 1.0);
 }
 
 main article:nth-of-type(1) section:nth-of-type(4) {
-  color: rgba(61, 44, 42, .64);
-  background-color: rgba(255, 255, 255, 1);
+  color: rgba(var(--bg-dark), 1.0);
+  background-color: rgba(var(--bg-light), 1);
 }
 
 main article:nth-of-type(1) section:nth-of-type(5) {
-  color: rgba(61, 44, 42, .64);
-  background-color: rgba(251, 216, 212, 1);
-}
-
-/* MARK: ALL PANELS
-*/
-app-container > * {
-  background-color: rgba(var(--bg-panel-color), var(--bg-panel-opacity));
-}
-
-.hero-content {
-  color: var(--accent);
-}
-
-[role="button"],
-button {
-  --bg-panel-opacity: 0.1;
+  color: rgba(var(--bg-dark), 1.0);
+  background-color: rgba(var(--bg-light), 1);
 }
 
 /* MARK: FORMS
 */
 form fieldset label:focus {
-  color: rgba(var(--txt-color), 1.0)
-}
-
-/*
-div {
-background: */
-/* cover */
-/* linear-gradient(var(--bg-panel-color) 33%,
-      rgba(var(--bg-panel-color), 0.0)),
-    linear-gradient(rgba(var(--bg-panel-color), 0.0),
-      var(--bg-panel-color) 66%) 0 100%, */
-/* drop-shadow */
-/* radial-gradient(farthest-side at 50% 0,
-      rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
-    radial-gradient(farthest-side at 50% 100%,
-      rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)) 0 100%;
-  background-color: rgba(var(--bg-panel-color), var(--bg-panel-opacity));
-  background-repeat: no-repeat;
-  background-attachment: local, local, scroll, scroll;
-  background-size: 100% 36px, 100% 36px, 100% 5px, 100% 5px;
-}
-*/
-
-/* nav {
-  background-color: rgba(17, 24, 39, 0.4);
-  background-color: #7B5955;
-  box-shadow: rgba(0,0,0,0.5) 0 3px 3px 0;
-} */
-
-.card {
-  color: rgb(61, 44, 42, .75);
-  background-color: rgb(251, 216, 212, 1);
-
-  [role="button"] {
-    color: rgba(250, 250, 250, 1);
-    background-color: rgb(185, 133, 128, 1);
-  }
+  color: rgba(var(--fg-light), 1.0)
 }
 
 hr {
-  color:rgba(255,255,255,1.0);
-  background-color: rgb(185, 133, 128, 1);
+  color: rgba(var(--fg-light), 1.0);
+  background-color: rgb(var(--bg-emphasize), 1);
 }
 
 footer {
-  background-color: #000;
+  background-color: transparent;
+}
+
+nav {
+  background-color: transparent;
+  color: rgba(var(--fg-light), 1.0);
+
+  label {
+
+    &:hover,
+    &:has(input:checked) {
+      color: rgba(var(--fg-emphasis), 1.0);
+      background-color: rgba(var(--bg-light), 0.2);
+    }
+  }
+}
+
+main article:nth-of-type(1) section:nth-of-type(1) {
+  background-color: rgba(var(--bg-dark), 0.0);
+  color: rgba(var(--fg-light), 1.0);
+}
+
+main article:nth-of-type(1) section:nth-of-type(2) {
+  background-color: rgba(var(--bg-light), 1.0);
+  color: rgba(var(--fg-dark), 1.0);
+
+  [role="button"],
+  button {
+    background-color: rgba(var(--bg-dark), 0.5);
+    color: rgba(var(--fg-emphasis), 1.0);
+
+    &:hover {
+      background-color: rgba(var(--bg-dark), 0.2);
+      color: rgba(var(--fg-emphasis), 1.0);
+    }
+  }
+}
+
+main article:nth-of-type(1) section:nth-of-type(3) {
+  background-color: rgba(var(--bg-dark), 0.0);
+  color: rgba(var(--fg-light), 1.0);
+
+  [role="button"],
+  button {
+    background-color: rgba(var(--bg-light), 0.5);
+    color: rgba(var(--fg-emphasis), 1.0);
+
+    &:hover {
+      background-color: rgba(var(--bg-light), 0.2);
+      color: rgba(var(--fg-emphasis), 1.0);
+    }
+  }
 }

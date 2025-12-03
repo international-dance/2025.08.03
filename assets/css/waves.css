@@ -9,7 +9,8 @@
 }
 
 .waves {
-  --wave-color: 251, 216, 212; /* #FDB8D4; rgb(251, 216, 212, 1) */
+  --wave-light: 251, 216, 212; /* #FDB8D4; rgb(251, 216, 212, 1) */
+  --wave-dark: 45, 34, 33; /* #FDB8D4; rgb(251, 216, 212, 1) */
 
   position: relative;
   width: 100%;
