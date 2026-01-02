@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="assets/css/nav.css">
 		<link rel="stylesheet" href="assets/css/hero.css">
 		<link rel="stylesheet" href="assets/css/carousel.css">
+		<link rel="stylesheet" href="assets/css/scrollbars.css">
 		<!-- <link rel="stylesheet" href="assets/css/cards.css"> -->
 		<!-- <link rel="stylesheet" href="assets/css/fonts.css"> -->
 		<link rel="stylesheet" href="assets/css/typography.css">
@@ -294,90 +295,103 @@
 					</section>
 					<section>
 						<h2>INSTRUCTORS and STAFF</h2>
-						<ul>
-							<li>
-								<figure tabindex="0">
-									<a href="#">
-										<img src="assets/images/teachers/e.jpg" decoding="async" alt="International Dance Owner, CEO, Artistic Director, and Instructor, Elizabeth Hawkins" />
-									</a>
-									<figcaption>
-										<h2>Elizabeth Hawkins</h2>
-										<p>Owner, CEO, Artistic Director, and Instructor</p>
-										<a href="#" role="button">More info</a>
-									</figcaption>
-								</figure>
+
+						<div class="action-bar">
+							<a href="#week-1">Staff</a>
+							<a href="#week-2">Teachers</a>
+						</div>
+						<ul class="carousel">
+							<li class="day-card flight">
+								<a id="week-1">
+									<img src="assets/images/teachers/e.jpg" alt="Elizabeth Hawkins">
+									<div class="meta">
+										<h2 class="location">Elizabeth Hawkins</h2>
+										<p class="desc">
+											Arrive in the morning. Spend the day wandering around the many adorable streets and sweet cafés of Paris.
+										</p>
+									</div>
+								</a>
 							</li>
-							<li>
-								<figure tabindex="0">
-									<a href="#">
-										<img src="assets/images/teachers/b.jpg" decoding="async" alt="Assistant Director and Instructor, Rebecca Collier" />
-									</a>
-									<figcaption>
-										<h2>Rebecca Collier</h2>
-										<p>Assistant Director, Instructor</p>
-										<a href="#" role="button">More info</a>
-									</figcaption>
-								</figure>
+							<li class="day-card">
+								<img src="https://images.unsplash.com/photo-1609971757431-439cf7b4141b?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paris">
+								<div class="meta">
+									<h2 class="location">Paris</h2>
+									<p class="desc">Spend the day exploring top sights in Paris with your personal tour guide.</p>
+								</div>
 							</li>
-							<li>
-								<figure tabindex="0">
-									<a href="#">
-										<img src="assets/images/teachers/m.jpg" decoding="async" alt="Instructor Misha Mlejova" />
-									</a>
-									<figcaption>
-										<h2>Misha Mlejova</h2>
-										<p>Instructor</p>
-										<a href="#" role="button">More info</a>
-									</figcaption>
-								</figure>
+							<li class="day-card train">
+								<img src="https://images.unsplash.com/photo-1650765931316-3033ca92409b?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Versailles">
+								<div class="meta">
+									<h2 class="location">Versailles</h2>
+									<p class="desc">Explore Versailles from the lavish interior to the well-manicured gardens.</p>
+								</div>
 							</li>
-							<li>
-								<figure tabindex="0">
-									<a href="#">
-										<img src="assets/images/teachers/t.jpg" decoding="async" alt="International Dance Owner, CEO, Artistic Director, and Teacher Elizabeth Hawkins" />
-									</a>
-									<figcaption>
-										<h2>Elizabeth Hawkins</h2>
-										<p>Owner, CEO, Artistic Director, and Instructor</p>
-										<a href="#" role="button">More info</a>
-									</figcaption>
-								</figure>
+							<li class="day-card train">
+								<img src="https://plus.unsplash.com/premium_photo-1697729582646-a5d923464b30?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="loire valley">
+								<div class="meta">
+									<h2 class="location">Loire Valley</h2>
+									<p class="desc">Stay overnight in the Loire Valley. Explore it's luxurious vineyards.</p>
+								</div>
 							</li>
-							<li>
-								<figure tabindex="0">
-									<a href="#">
-										<img src="assets/images/teachers/e.jpg" decoding="async" alt="International Dance Owner, CEO, Artistic Director, and Teacher Elizabeth Hawkins" />
-									</a>
-									<figcaption>
-										<h2>Elizabeth Hawkins</h2>
-										<p>Owner, CEO, Artistic Director, and Instructor</p>
-										<a href="#" role="button">More info</a>
-									</figcaption>
-								</figure>
+							<li class="day-card">
+								<img src="https://images.unsplash.com/photo-1620679393872-2501651282c1?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="wine">
+								<div class="meta">
+									<h2 class="location">Burgundy</h2>
+									<p class="desc">Enjoy another wine-filled day with a vineyard tour of the Burgundy region.</p>
+								</div>
+							</li>
+							<li class="day-card car">
+								<img src="https://images.unsplash.com/photo-1708793870276-9d529dce1288?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="wine">
+								<div class="meta">
+									<h2 class="location">Burgundy</h2>
+									<p class="desc">Walk around the town of Burgundy and learn about its history.</p>
+								</div>
+							</li>
+							<li class="day-card car">
+								<img src="https://plus.unsplash.com/premium_photo-1724604871348-298594ad4eed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hhbW9uaXh8ZW58MHx8MHx8fDA%3D" alt="Chamonix">
+								<div class="meta">
+									<h2 class="location">Chamonix</h2>
+									<p class="desc">Enjoy a beautiful hike near the picturesque town of Chamonix.</p>
+								</div>
+							</li>
+							<li class="day-card car week-start">
+								<a id="week-2"></a>
+								<img src="https://images.unsplash.com/photo-1604440401661-8f6f07c285a2?q=80&w=2163&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="nice">
+								<div class="meta">
+									<h2 class="location">Nice</h2>
+									<p class="desc">Arrive in Nice and explore town. Do some souvenier shopping or get a drink at a café.</p>
+								</div>
+							</li>
+							<li class="day-card car">
+								<img src="https://images.unsplash.com/photo-1504459257750-a6dc59581529?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+								<div class="meta">
+									<h2 class="location">Nice</h2>
+									<p class="desc">Enjoy a relaxing day by the beach.</p>
+								</div>
+							</li>
+							<li class="day-card flight">
+								<img src="https://images.unsplash.com/photo-1575218283431-a91baee79f47?q=80&w=1990&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Arles">
+								<div class="meta">
+									<h2 class="location">Arles</h2>
+									<p class="desc">Explore this historic city center on the Rhône River.</p>
+								</div>
+							</li>
+							<li class="day-card flight">
+								<img src="https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?q=80&w=1990&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paris">
+								<div class="meta">
+									<h2 class="location">Paris</h2>
+									<p class="desc">Enjoy one more night in Paris before flying home.</p>
+								</div>
 							</li>
 						</ul>
 
-					</section>
-					<section>
-
-						<h2>CLASSES</h2>
-						<p>Classes content</p>
-						<a href="#" role="button">More info</a>
-
+						<!-- <div class="plane"></div> -->
 					</section>
 					<section>
 
 						<h2>ABOUT</h2>
 
 						<p>International Dance, LLC. was founded as The School of International Dance by Christina Heimlich in 1962. The school is directed by Elizabeth Hawkins. Our instructors are Elizabeth Hawkins, Becca Collier ~ Assistant Director, Sarah Brinkmann , Victoria Hawkins, Natalie Clingenpeel and Misha Mlejova.</p>
-						<a href="#" role="button">More info</a>
-
-					</section>
-					<section>
-
-						<h2>SECTION 06</h2>
-
-						<p>content</p>
 						<a href="#" role="button">More info</a>
 
 					</section>
@@ -785,384 +799,384 @@
 
 					<h2>~ ENROLLMENT ~</h3>
 
-						<p>Enrollment is for a continuous period each year from September through June (10 months).</p>
+					<p>Enrollment is for a continuous period each year from September through June (10 months).</p>
 
-						<p>We encourage students to finish the year so as to complete the planned curriculum.</p>
+					<p>We encourage students to finish the year so as to complete the planned curriculum.</p>
 
-						<p>In order to keep up with the level of the class, each student must maintain good attendance and
-							be on time for the beginning of the class. This helps the student warm up properly and prevent
-							injury.
-						</p>
+					<p>In order to keep up with the level of the class, each student must maintain good attendance and
+						be on time for the beginning of the class. This helps the student warm up properly and prevent
+						injury.
+					</p>
 
-						<hr>
+					<hr>
 
-						<h2>~ PLACEMENT ~</h3>
+					<h2>~ PLACEMENT ~</h3>
 
-							<p>Placement is at the discretion of the Directors and Instructors of International Dance, LLC. All
-								students are carefully placed in levels to insure maximum progress. Although students are placed
-								according to age for beginning levels, students with some training will be placed into
-								respective classes depending on ability, strength and previous development based on the judgment
-								of the directors and instructors.
-							</p>
+					<p>Placement is at the discretion of the Directors and Instructors of International Dance, LLC. All
+						students are carefully placed in levels to insure maximum progress. Although students are placed
+						according to age for beginning levels, students with some training will be placed into
+						respective classes depending on ability, strength and previous development based on the judgment
+						of the directors and instructors.
+					</p>
 
-							<p>Advancement, however, depends upon application, attitude, artistic abilities, dance
-								accomplishment and physical qualifications, not necessarily upon age, or length of time spent
-								studying dance.</p>
+					<p>Advancement, however, depends upon application, attitude, artistic abilities, dance
+						accomplishment and physical qualifications, not necessarily upon age, or length of time spent
+						studying dance.</p>
 
-							<hr>
+					<hr>
 
-							<h2>~ POINTE ~</h3>
+					<h2>~ POINTE ~</h3>
 
-								<p>Pointe (toe): Typically requires four or five years of preparatory study and is not permitted
-									until a student is at least eleven, twelve or thirteen years old and has both good body
-									placement and control. Exceptions to this and other pointe rules are determined by an assessment
-									on an individual basis by the director.
-								</p>
+					<p>Pointe (toe): Typically requires four or five years of preparatory study and is not permitted
+						until a student is at least eleven, twelve or thirteen years old and has both good body
+						placement and control. Exceptions to this and other pointe rules are determined by an assessment
+						on an individual basis by the director.
+					</p>
 
-								<p>A minimum of two ballet classes a week is required to take pointe class because dancing on pointe
-									shoes demands extra strength and technique. The dancers strength and focus contribute to ongoing
-									progress on pointe.
-								</p>
+					<p>A minimum of two ballet classes a week is required to take pointe class because dancing on pointe
+						shoes demands extra strength and technique. The dancers strength and focus contribute to ongoing
+						progress on pointe.
+					</p>
 
-								<hr>
+					<hr>
 
-								<h2>~ TUITION ~</h3>
+					<h2>~ TUITION ~</h3>
 
-									<p>Tuition is to be paid IN ADVANCE whether paid in 1 complete annual payment or 10 payments
-										covering September through June - according to the payment schedule. See Tuition for details.
-									</p>
+					<p>Tuition is to be paid IN ADVANCE whether paid in 1 complete annual payment or 10 payments
+						covering September through June - according to the payment schedule. See Tuition for details.
+					</p>
 
-									<p>A withdrawal can only become effective when the studio is notified in writing 30 days in advance
-										of a new four week period according to the payment schedule.
-									</p>
+					<p>A withdrawal can only become effective when the studio is notified in writing 30 days in advance
+						of a new four week period according to the payment schedule.
+					</p>
 
-									<p>If tuition is not current the student will not be allowed to continue classes.</p>
+					<p>If tuition is not current the student will not be allowed to continue classes.</p>
 
-									<p>There is a $55 per student non-refundable registration fee for each year.</p>
+					<p>There is a $55 per student non-refundable registration fee for each year.</p>
 
-									<p>There is a $20 cleaning fee per student.</p>
+					<p>There is a $20 cleaning fee per student.</p>
 
-									<p>There is a $75 Media Technology fee per Family.</p>
+					<p>There is a $75 Media Technology fee per Family.</p>
 
-									<p>A late fee of $25 will be assessed if payment is not made by the second week of the payment
-										period.
-									</p>
+					<p>A late fee of $25 will be assessed if payment is not made by the second week of the payment
+						period.
+					</p>
 
-									<p>There will be a $35 charge for all returned checks.</p>
+					<p>There will be a $35 charge for all returned checks.</p>
 
-									<hr>
+					<hr>
 
-									<h2>~ ARRIVALS ~</h3>
+					<h2>~ ARRIVALS ~</h3>
 
-										<p>Arrive 10 minutes before class begins (this ensures all dancers have adequate warm-up time to
-											avoid injury).
-										</p>
+					<p>Arrive 10 minutes before class begins (this ensures all dancers have adequate warm-up time to
+						avoid injury).
+					</p>
 
-										<p>If a dancer arrives late please enter class but try not to disrupt the other dents.</p>
+					<p>If a dancer arrives late please enter class but try not to disrupt the other dents.</p>
 
-										<p>We strongly encourage parents to be on time for both dropping off and picking up your students.
-										</p>
+					<p>We strongly encourage parents to be on time for both dropping off and picking up your students.
+					</p>
 
-										<hr>
+					<hr>
 
-										<h2>~ MISSED CLASSES/ATTENDANCE ~</h3>
+					<h2>~ MISSED CLASSES/ATTENDANCE ~</h3>
 
-											<p>There is no refund or credit for missed classes for any reason, including injury or illness.</p>
+					<p>There is no refund or credit for missed classes for any reason, including injury or illness.</p>
 
-											<p>Missed classes may be made up in a class of comparable placement, i.e. the student's current
-												class level or lower. STUDENTS MAY NOT MAKE UP MISSED CLASSES IN LEVELS HIGHER THAN THEIR
-												CURRENT YEAR PLACEMENT. All make-up classes must be made within four weeks of the missed class.
-											</p>
+					<p>Missed classes may be made up in a class of comparable placement, i.e. the student's current
+						class level or lower. STUDENTS MAY NOT MAKE UP MISSED CLASSES IN LEVELS HIGHER THAN THEIR
+						CURRENT YEAR PLACEMENT. All make-up classes must be made within four weeks of the missed class.
+					</p>
 
-											<p>Make-up classes are in addition to the student's regular classes. Classes can be made up anytime
-												within the current season with approval from the director but cannot be accumulated to the end
-												of the season in place of the last four-week payment.
-											</p>
+					<p>Make-up classes are in addition to the student's regular classes. Classes can be made up anytime
+						within the current season with approval from the director but cannot be accumulated to the end
+						of the season in place of the last four-week payment.
+					</p>
 
-											<p>A class for which a student has enrolled cannot be dropped and then used for a make-up class.</p>
+					<p>A class for which a student has enrolled cannot be dropped and then used for a make-up class.</p>
 
-											<p>No person may make-up a class if they have not paid for their current four-week period in which
-												the make-up class is to be taken.
-											</p>
+					<p>No person may make-up a class if they have not paid for their current four-week period in which
+						the make-up class is to be taken.
+					</p>
 
-											<p>No classes may be carried over from the fall-winter course to the summer course or from the
-												summer course to the fall-winter course.
-											</p>
+					<p>No classes may be carried over from the fall-winter course to the summer course or from the
+						summer course to the fall-winter course.
+					</p>
 
-											<p>Tuition is non-transferable and non-refundable.</p>
+					<p>Tuition is non-transferable and non-refundable.</p>
 
-											<hr>
+					<hr>
 
-											<h2>~ CLASS DECORUM ~</h3>
+					<h2>~ CLASS DECORUM ~</h3>
 
-												<p>Please give the instructors full attention at all times without talking to the other students.
-												</p>
+					<p>Please give the instructors full attention at all times without talking to the other students.
+					</p>
 
-												<p>During class, teachers and students may, but are not required to, wear masks during their class.
-													Appropriate social distancing and hand washing will be maintained at all times.
-												</p>
+					<p>During class, teachers and students may, but are not required to, wear masks during their class.
+						Appropriate social distancing and hand washing will be maintained at all times.
+					</p>
 
-												<p>Please remind your dancer(s) to maintain a reasonable distance in effort to help others stay
-													comfortable.
-												</p>
+					<p>Please remind your dancer(s) to maintain a reasonable distance in effort to help others stay
+						comfortable.
+					</p>
 
-												<p>Class time is not to be used for socializing.</p>
+					<p>Class time is not to be used for socializing.</p>
 
-												<p>Personal corrections are given for improvement, please look upon them as extra help.</p>
+					<p>Personal corrections are given for improvement, please look upon them as extra help.</p>
 
-												<p>No gum chewing, sitting down or hanging on barres will be allowed.</p>
+					<p>No gum chewing, sitting down or hanging on barres will be allowed.</p>
 
-												<p>Other than water, absolutely no food or drinks are permitted in the studio at any time.</p>
+					<p>Other than water, absolutely no food or drinks are permitted in the studio at any time.</p>
 
-												<hr>
+					<hr>
 
-												<h2>~ PERFORMANCES ~</h3>
+					<h2>~ PERFORMANCES ~</h3>
 
-													<p>All performances will follow state and federal COVID-19 guidelines for large gatherings.</p>
+					<p>All performances will follow state and federal COVID-19 guidelines for large gatherings.</p>
 
-													<p>International Dance, LLC. students participate in the Spring Recital with the exception being
-														Miss Elizabeth will assess the youngest students and decide if they are ready to perform.
-													</p>
+					<p>International Dance, LLC. students participate in the Spring Recital with the exception being
+						Miss Elizabeth will assess the youngest students and decide if they are ready to perform.
+					</p>
 
-													<p>In order to participate in the Spring Recital, each dancer must have paid the in full all tuition
-														prior to performing and have paid any performance fees and costume fees required by
-														International Dance, LLC.
-													</p>
+					<p>In order to participate in the Spring Recital, each dancer must have paid the in full all tuition
+						prior to performing and have paid any performance fees and costume fees required by
+						International Dance, LLC.
+					</p>
 
-													<p>Other optional performances include international festivals, art events, nursing home
-														performances and our Christmas Show.
-													</p>
+					<p>Other optional performances include international festivals, art events, nursing home
+						performances and our Christmas Show.
+					</p>
 
-													<hr>
+					<hr>
 
-													<h2>~ CHRISTINA HEIMLICH DANCERS ~</h3>
+					<h2>~ CHRISTINA HEIMLICH DANCERS ~</h3>
 
-														<p>The Christina Heimlich Dancers are an elite group of dancers chosen by International Dance, LLC.
-															directors and instructors.
-														</p>
+					<p>The Christina Heimlich Dancers are an elite group of dancers chosen by International Dance, LLC.
+						directors and instructors.
+					</p>
 
-														<p>Christina Heimlich Dancers represent the best of what International Dance, LLC. has to offer.</p>
+					<p>Christina Heimlich Dancers represent the best of what International Dance, LLC. has to offer.</p>
 
-														<p>Christina Heimlich Dancers are ambassadors to the community sharing happiness through dancing and
-															bring the joy of dance to others.
-														</p>
+					<p>Christina Heimlich Dancers are ambassadors to the community sharing happiness through dancing and
+						bring the joy of dance to others.
+					</p>
 
-														<p>Christina Heimlich Dancers have additional performances and responsibilities throughout the year.
-														</p>
+					<p>Christina Heimlich Dancers have additional performances and responsibilities throughout the year.
+					</p>
 
-														<hr>
+					<hr>
 
-														<h2>~ CLASS ATTIRE ~</h3>
+					<h2>~ CLASS ATTIRE ~</h3>
 
-															<p>We require class uniforms. Black leotard, pink footed or convertible tights. Students may choose
-																a skin tone tights if desired. Pink Ballet shoes, Black tap shoes, Tan jazz shoes for Lyrical
-																classes.
-															</p>
+					<p>We require class uniforms. Black leotard, pink footed or convertible tights. Students may choose
+						a skin tone tights if desired. Pink Ballet shoes, Black tap shoes, Tan jazz shoes for Lyrical
+						classes.
+					</p>
 
-															<p>Pink ballet shoes must have one or two elastic straps sewn on and strings tied and cut off.</p>
+					<p>Pink ballet shoes must have one or two elastic straps sewn on and strings tied and cut off.</p>
 
-															<p>We do have an online store that is specifically for us. You can find your child's suggested
-																uniform at the following link. www.shopnimbly.com/InternationalDance
-															</p>
+					<p>We do have an online store that is specifically for us. You can find your child's suggested
+						uniform at the following link. www.shopnimbly.com/InternationalDance
+					</p>
 
-															<p>We have sizing kits for leotards and ballet and Jazz shoes available at the Pinecrest studio for
-																your convenience.
-															</p>
+					<p>We have sizing kits for leotards and ballet and Jazz shoes available at the Pinecrest studio for
+						your convenience.
+					</p>
 
-															<p>Having the uniform makes being ready for class easier for students and parents alike. We would
-																like to have all dancers in uniform at the start of the season. Thank you for your cooperation.
-															</p>
+					<p>Having the uniform makes being ready for class easier for students and parents alike. We would
+						like to have all dancers in uniform at the start of the season. Thank you for your cooperation.
+					</p>
 
-															<p>Do not wear your dance shoes outside of the studio.</p>
+					<p>Do not wear your dance shoes outside of the studio.</p>
 
-															<p>Tights must cover the entire foot while dancing.</p>
+					<p>Tights must cover the entire foot while dancing.</p>
 
-															<p>Female students should secure their hair in a neat bun. If you have short hair, please use bobby
-																pins to neatly secure it away from your face.
-															</p>
+					<p>Female students should secure their hair in a neat bun. If you have short hair, please use bobby
+						pins to neatly secure it away from your face.
+					</p>
 
-															<p>No jewelry (except small post earrings) should be worn in class (please leave jewelry at home as
-																International Dance, LLC. is not responsible for items lost).
-															</p>
+					<p>No jewelry (except small post earrings) should be worn in class (please leave jewelry at home as
+						International Dance, LLC. is not responsible for items lost).
+					</p>
 
-															<p>Please make sure your dancer's clothes are clean and free from holes and stains (including
-																tights, shoes and leotards).
-															</p>
+					<p>Please make sure your dancer's clothes are clean and free from holes and stains (including
+						tights, shoes and leotards).
+					</p>
 
-															<hr>
+					<hr>
 
-															<h2>~ WAITING AREAS and OUTSIDE GROUNDS ~</h3>
+					<h2>~ WAITING AREAS and OUTSIDE GROUNDS ~</h3>
 
-																<p>Currently we are asking all non-dancing family members to refrain from waiting in the front lobby
-																	area at the studio. The outside area at the Pinecrest studio has been upgraded and has a new
-																	facelift. A perfect place to wait before picking up your dancer.
-																</p>
+					<p>Currently we are asking all non-dancing family members to refrain from waiting in the front lobby
+						area at the studio. The outside area at the Pinecrest studio has been upgraded and has a new
+						facelift. A perfect place to wait before picking up your dancer.
+					</p>
 
-																<p>We request that all students refrain from excessive noise and rowdiness in the hallways and
-																	dressing rooms while waiting before and after classes.
-																</p>
+					<p>We request that all students refrain from excessive noise and rowdiness in the hallways and
+						dressing rooms while waiting before and after classes.
+					</p>
 
-																<p>Parents are asked to keep non-dancing children with them at all times and not permit them to
-																	wander the premises unattended. Please keep feet and hands off the walls, feet off the
-																	furniture, be
-																	careful to not spill on the floors, and put trash in the trash cans.
-																</p>
+					<p>Parents are asked to keep non-dancing children with them at all times and not permit them to
+						wander the premises unattended. Please keep feet and hands off the walls, feet off the
+						furniture, be
+						careful to not spill on the floors, and put trash in the trash cans.
+					</p>
 
-																<p>Treat it like it is your home and we will all be happier.</p>
+					<p>Treat it like it is your home and we will all be happier.</p>
 
-																<hr>
+					<hr>
 
-																<h2>~ COVID-19 ~</h3>
+					<h2>~ COVID-19 ~</h3>
 
-																	<p>International Dance, LLC. makes every effort to keep our studio sanitized and to prevent
-																		symptomatic employees and dancers from entering the building. However, COVID-19 has been proven
-																		to be asymptomatic in some persons. Therefore, International Dance, LLC. cannot guarantee that
-																		you or your child(ren) will not become infected with COVID-19 or any other known or unknown
-																		virus or illness. Further, attending International Dance, LLC. may increase your risk and your
-																		child(ren)'s risk of contracting COVID-19.
-																	</p>
+					<p>International Dance, LLC. makes every effort to keep our studio sanitized and to prevent
+						symptomatic employees and dancers from entering the building. However, COVID-19 has been proven
+						to be asymptomatic in some persons. Therefore, International Dance, LLC. cannot guarantee that
+						you or your child(ren) will not become infected with COVID-19 or any other known or unknown
+						virus or illness. Further, attending International Dance, LLC. may increase your risk and your
+						child(ren)'s risk of contracting COVID-19.
+					</p>
 
-																	<p>When registering your student you are acknowledging and aware of how the contagious nature of
-																		COVID-19 may affect your dancer and you voluntarily assume the risk that my child(ren) and I may
-																		be exposed to or infected by COVID-19 by attending International Dance, LLC. and that such
-																		exposure or infection may result in personal injury, illness, permanent disability, and or
-																		death. By signing this agreement, I agree that my child and any accompanying persons will not
-																		enter International Dance, LLC. if we exhibit any of the following new or worsening signs or
-																		symptoms of possible COVID-19:
-																	</p>
+					<p>When registering your student you are acknowledging and aware of how the contagious nature of
+						COVID-19 may affect your dancer and you voluntarily assume the risk that my child(ren) and I may
+						be exposed to or infected by COVID-19 by attending International Dance, LLC. and that such
+						exposure or infection may result in personal injury, illness, permanent disability, and or
+						death. By signing this agreement, I agree that my child and any accompanying persons will not
+						enter International Dance, LLC. if we exhibit any of the following new or worsening signs or
+						symptoms of possible COVID-19:
+					</p>
 
-																	<p>* A temperature greater than 100.4 degrees Fahrenheit,<br>
-																		* cough,<br>
-																		* shortness of breath or difficulty breathing,<br>
-																		* other respiratory symptoms,
-																	</p>
+					<p>* A temperature greater than 100.4 degrees Fahrenheit,<br>
+						* cough,<br>
+						* shortness of breath or difficulty breathing,<br>
+						* other respiratory symptoms,
+					</p>
 
-																	<p>Or at least two of the following symptoms:<br>
-																		* chills,<br>
-																		* repeated shaking with chills,<br>
-																		* muscle pain,<br>
-																		* sore throat or new loss of taste or smell.
-																	</p>
+					<p>Or at least two of the following symptoms:<br>
+						* chills,<br>
+						* repeated shaking with chills,<br>
+						* muscle pain,<br>
+						* sore throat or new loss of taste or smell.
+					</p>
 
-																	<p>I also agree that, neither my child(ren) nor any accompanying adult will enter International
-																		Dance, LLC. if we have had known close contact with a person who is lab-confirmed to have
-																		COVID-19.
-																	</p>
+					<p>I also agree that, neither my child(ren) nor any accompanying adult will enter International
+						Dance, LLC. if we have had known close contact with a person who is lab-confirmed to have
+						COVID-19.
+					</p>
 
-																	<p>Protocols are in place if staff/faculty/student becomes ill including contact tracing to the best
-																		of our ability.
-																	</p>
+					<p>Protocols are in place if staff/faculty/student becomes ill including contact tracing to the best
+						of our ability.
+					</p>
 
-																	<p>Protocols are subject to change as CDC guidelines and recommendations dictate. Thank you for
-																		being part of our International Dance, LLC. family, and for your help as we navigate this new
-																		environment together for everyone's health and wellness.
-																	</p>
+					<p>Protocols are subject to change as CDC guidelines and recommendations dictate. Thank you for
+						being part of our International Dance, LLC. family, and for your help as we navigate this new
+						environment together for everyone's health and wellness.
+					</p>
 
-																	<hr>
+					<hr>
 
-																	<h2>~ SECURITY ~</h3>
+					<h2>~ SECURITY ~</h3>
 
-																		<p>International Dance, LLC. will not be responsible for personal property left or lost in any area
-																			of the school.
-																		</p>
+					<p>International Dance, LLC. will not be responsible for personal property left or lost in any area
+						of the school.
+					</p>
 
-																		<p>Bring your purse/dance bag into the studio and place it in the changing room.</p>
+					<p>Bring your purse/dance bag into the studio and place it in the changing room.</p>
 
-																		<p>Please put names in all dance-wear and shoes.</p>
+					<p>Please put names in all dance-wear and shoes.</p>
 
-																		<p>Call the office as soon as you realize something has been left at the school so that we may
-																			retrieve it and hold it for you or check our lost and found in the dressing room next time
-																			you're in the studio.
-																		</p>
+					<p>Call the office as soon as you realize something has been left at the school so that we may
+						retrieve it and hold it for you or check our lost and found in the dressing room next time
+						you're in the studio.
+					</p>
 
-																		<hr>
+					<hr>
 
-																		<h2>~ BEHAVIOR ~</h3>
+					<h2>~ BEHAVIOR ~</h3>
 
-																			<p>International Dance strives to provide a safe and supportive community that fosters a lifelong
-																				love for dance and creative expression. As such, International Dance expects each and every
-																				student, dancer, assistant, teacher, instructor, staff member and or parent/guardian to respect
-																				and be kind to each other at all times. International Dance does not tolerate bullying in any
-																				form; physical, emotional, social or otherwise.
-																			</p>
+					<p>International Dance strives to provide a safe and supportive community that fosters a lifelong
+						love for dance and creative expression. As such, International Dance expects each and every
+						student, dancer, assistant, teacher, instructor, staff member and or parent/guardian to respect
+						and be kind to each other at all times. International Dance does not tolerate bullying in any
+						form; physical, emotional, social or otherwise.
+					</p>
 
-																			<p>International Dance defines bullying as any behavior; physical, verbal, written (electronically
-																				or in person), that purposely and detrimentally targets another student, dancer, assistant,
-																				teacher, instructor, staff member and or parent/guardian.
-																			</p>
+					<p>International Dance defines bullying as any behavior; physical, verbal, written (electronically
+						or in person), that purposely and detrimentally targets another student, dancer, assistant,
+						teacher, instructor, staff member and or parent/guardian.
+					</p>
 
-																			<p>Reports of bullying will be investigated, verified, and documented by International Dance staff
-																				members. This investigation may include but is not limited to contacting the alleged bullying
-																				party, the alleged victim, teachers, assistants, and parent/guardians who may have possibly
-																				witnessed the event(s). If staff investigation produces corroborating evidence of the report, it
-																				will be documented and serve as the basis for a course of action. International Dance director,
-																				Elizabeth Hawkins, also reviews any and all reports of bullying.
-																			</p>
+					<p>Reports of bullying will be investigated, verified, and documented by International Dance staff
+						members. This investigation may include but is not limited to contacting the alleged bullying
+						party, the alleged victim, teachers, assistants, and parent/guardians who may have possibly
+						witnessed the event(s). If staff investigation produces corroborating evidence of the report, it
+						will be documented and serve as the basis for a course of action. International Dance director,
+						Elizabeth Hawkins, also reviews any and all reports of bullying.
+					</p>
 
-																			<p>Verified and documented reports may have severe consequences up to and including immediate
-																				termination of enrollment without refund for classes missed.
-																			</p>
+					<p>Verified and documented reports may have severe consequences up to and including immediate
+						termination of enrollment without refund for classes missed.
+					</p>
 
-																			<p>As per the policy above, International Dance recognizes that bullying does not just occur between
-																				students. Parents or guardians who are witnessed as bullying or harassing another student,
-																				dancer, assistant, teacher, instructor, staff member and or parent/guardian, are equally subject
-																				to the above policies and consequences.
-																			</p>
+					<p>As per the policy above, International Dance recognizes that bullying does not just occur between
+						students. Parents or guardians who are witnessed as bullying or harassing another student,
+						dancer, assistant, teacher, instructor, staff member and or parent/guardian, are equally subject
+						to the above policies and consequences.
+					</p>
 
-																			<hr>
+					<hr>
 
-																			<h2>~ STUDIO CLOSURES ~</h3>
+					<h2>~ STUDIO CLOSURES ~</h3>
 
-																				<p>Specific dates for the International Dance, LLC. holidays are shown on the Schedule page.</p>
+					<p>Specific dates for the International Dance, LLC. holidays are shown on the Schedule page.</p>
 
-																				<p>Classes may be made up for holiday closures on</p>
+					<p>Classes may be made up for holiday closures on</p>
 
-																				<p>Columbus Day</p>
+					<p>Columbus Day</p>
 
-																				<p>President's Day</p>
+					<p>President's Day</p>
 
-																				<p>For the two weeks we are closed for the December holidays and the two-weeks of Spring Break that
-																					we are closed, there is no charge and no make-up classes are necessary.
-																				</p>
+					<p>For the two weeks we are closed for the December holidays and the two-weeks of Spring Break that
+						we are closed, there is no charge and no make-up classes are necessary.
+					</p>
 
-																				<hr>
+					<hr>
 
-																				<h2>~ INCLEMENT WEATHER ~</h3>
+					<h2>~ INCLEMENT WEATHER ~</h3>
 
-																					<p>Inclement Weather: In the event of inclement weather, International Dance, LLC. follows Fairfax
-																						County Public Schools for closings. Should schools have delayed openings due to inclement
-																						weather, International Dance, LLC. will, in most cases, be open on time. A message will be
-																						published on the website home page and emailed to registered students/parents, when the studio
-																						is closed because of weather conditions. Classes missed due to inclement weather may be made up
-																						during the normal school year.
-																					</p>
+					<p>Inclement Weather: In the event of inclement weather, International Dance, LLC. follows Fairfax
+						County Public Schools for closings. Should schools have delayed openings due to inclement
+						weather, International Dance, LLC. will, in most cases, be open on time. A message will be
+						published on the website home page and emailed to registered students/parents, when the studio
+						is closed because of weather conditions. Classes missed due to inclement weather may be made up
+						during the normal school year.
+					</p>
 
-																					<hr>
+					<hr>
 
-																					<h2>~ SPECIAL ANNOUNCEMENTS ~</h3>
+					<h2>~ SPECIAL ANNOUNCEMENTS ~</h3>
 
-																						<p>A newsletter is published and emailed to registered students every month with reminders of
-																							holiday closures, payment due dates, rehearsals and other important announcements or pertinent
-																							information.
-																						</p>
+					<p>A newsletter is published and emailed to registered students every month with reminders of
+						holiday closures, payment due dates, rehearsals and other important announcements or pertinent
+						information.
+					</p>
 
-																						<p>Please "like" and "follow" us on Facebook , Instagram or Twitter to get the latest news and
-																							events.
-																						</p>
+					<p>Please "like" and "follow" us on Facebook , Instagram or Twitter to get the latest news and
+						events.
+					</p>
 
-																						<hr>
+					<hr>
 
-																						<h2>~ DISCLAIMER ~</h3>
+					<h2>~ DISCLAIMER ~</h3>
 
-																							<p>Dance is a physical activity, and as with all such activity there is an inherent risk of injury.
-																								International Dance, LLC. does not assume any liability for injury or accident which occurs
-																								while participating in classes or performances. As when beginning any new physical activity if
-																								you have questions about your ability to participate, please contact your personal physician.
-																							</p>
+					<p>Dance is a physical activity, and as with all such activity there is an inherent risk of injury.
+						International Dance, LLC. does not assume any liability for injury or accident which occurs
+						while participating in classes or performances. As when beginning any new physical activity if
+						you have questions about your ability to participate, please contact your personal physician.
+					</p>
 
-																							<p>COVID-19 Agreement<br>
-																								© 2022 by International Dance, LLC.
-																							</p>
+					<p>COVID-19 Agreement<br>
+						© 2022 by International Dance, LLC.
+					</p>
 				</article>
 				<article>
 					<h2>~ CONTACT ~</h2>
@@ -1184,7 +1198,7 @@
 				</article>
 			</main>
 			<footer>
-				<app-copy>© 2065 International Dance, LLC.</app-copy>
+				<app-copy>© 2026 International Dance, LLC.</app-copy>
 				<app-social aria-label="Social media bar">
 					<a href="https://www.facebook.com" target="_blank" aria-label="Facebook logo icon">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227.01 508.05">

@@ -64,35 +64,6 @@
   }
 }
 
-
-/* MARK: CAROUSEL
-*/
-
-.carousel {
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth
-  }
-}
-
-.carousel {
-  & .carousel__slide {
-    &.season-start::scroll-marker {
-      @media (prefers-reduced-motion: no-preference) {
-        transition: text-decoration .8s ease, font-variation-settings .3s ease;
-      }
-    }
-  }
-}
-
-.carousel__slide {
-
-  &.season-start::scroll-marker {
-    @media (prefers-reduced-motion: no-preference) {
-      transition: text-decoration .8s ease, font-variation-settings .3s ease
-    }
-  }
-}
-
 app-logo svg {
   display: block;
   position: absolute;

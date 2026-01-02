@@ -112,7 +112,7 @@ ul {
 
 li {
   margin-block: 0.5em;
-  margin-inline: 2em;
+  /* margin-inline: 2em; */
 }
 
 h1 {
