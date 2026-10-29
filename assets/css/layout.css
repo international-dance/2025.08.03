@@ -63,7 +63,7 @@ main article {
     font-family: "Cinzel", serif;
     opacity: 0.6;
     background-color: rgba(255, 255, 255, 0.7);
-    height: 2px;
+    height: 0;
     transform: scale(1.5, 1.25);
   }
 
